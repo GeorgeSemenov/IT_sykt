@@ -29,7 +29,7 @@ module.exports = {
 			filename:'blog.html',//Задаём имя генерируемому файлу
 			chunks: ['blog'],
 			template: PATHS.source + '/pages/blog/blog.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
-		}),
+		})
 	],
 	module:{
 		rules: [
