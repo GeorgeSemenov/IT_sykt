@@ -8,8 +8,8 @@ const PATHS = {//Объект с двумя свойствами
 
 module.exports = {
 	entry: {
-		'index': PATHS.source + 'pages/index/index.js',//Обрати внимание для кадой страницы мы создаём свою точку входа которая начинается с .js файла
-		'blog': PATHS.source + 'pages/blog/blog.js'
+		'index': PATHS.source + '/pages/index/index.js',//Обрати внимание для кадой страницы мы создаём свою точку входа которая начинается с .js файла
+		'blog': PATHS.source + '/pages/blog/blog.js'
 	},
 	devServer: {//Можно легко изменить порт, по которому будет находиться сайт и куча других настроек в пункте dev-server
 		contentBase:'./build',//Указываем директорию, откуда будет строиться сайт на локальном сервере(по умолчанию сразу по адрессу localhost:8080 будет выводиться index.html)
