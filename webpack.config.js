@@ -18,7 +18,19 @@ module.exports = {
 	},
 	plugins:[
 		new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
-			title: 'Webpack app'
+			//title: 'Webpack app' вместо этой строки в данный плагин мы передадим сразу разметку pug но сразу же скомпилированную (pug-loader'oм)
+			template: PATHS.source + '/index.pug'
 		})
-	]
+	],
+	module:{
+		rules: [
+			{//Тут описываем натройки лоадера
+				test: /\.pug$/,
+				loader:'pug-loader',//настраиваем pug-loader
+				options:{
+					pretty: true//сделать код компилируемого файла "красивого" раставляем отступы , переносы и т.д.
+				}
+			}
+		]
+	}
 }
