@@ -6,14 +6,10 @@ const PATHS = {//Объект с двумя свойствами
 	build: path.join(__dirname, 'build')
 };
 
-module.exports = {
+const common= {
 	entry: {
 		'index': PATHS.source + '/pages/index/index.js',//Обрати внимание для кадой страницы мы создаём свою точку входа которая начинается с .js файла
 		'blog': PATHS.source + '/pages/blog/blog.js'
-	},
-	devServer: {//Можно легко изменить порт, по которому будет находиться сайт и куча других настроек в пункте dev-server
-		contentBase:'./build',//Указываем директорию, откуда будет строиться сайт на локальном сервере(по умолчанию сразу по адрессу localhost:8080 будет выводиться index.html)
-		hot: true //Это указание на то что мы используем горячую замену модулей Hot Module Replacement
 	},
 	output: {
 		path: PATHS.build,
@@ -43,3 +39,26 @@ module.exports = {
 		]
 	}
 }
+
+const developmentConfig ={
+	devServer: {//Можно легко изменить порт, по которому будет находиться сайт и куча других настроек в пункте dev-server
+		contentBase:'./build',//Указываем директорию, откуда будет строиться сайт на локальном сервере(по умолчанию сразу по адрессу localhost:8080 будет выводиться index.html), если в этой папке будет, например, blog.html , то эта страница будет доступна по https://localhost/blog.html
+		hot: true, //Это указание на то что мы используем горячую замену модулей Hot Module Replacement
+		stats: 'errors-only',//Теперь в косноли будут вылезать только ошибки
+		port: 9000,//теперича сайт будет открываться на 9000 порту
+		watchContentBase: true
+	}
+};
+
+module.exports = function(env){
+	if (env === 'production'){// env - параметр который передаётся в npm scripts - загляни в package.jsone
+		return common;
+	}
+	if (env === 'development'){
+		return Object.assign(//Метод assign нужен чтобы склеивать объекты. Он принимает три аргумента
+			{},//Первый аргумент - пустой объект, как я понимаю туда будут записываться два других объекта.
+			common,//Второй и третий аргументы - объекты которые должны быть склеены
+			developmentConfig
+		)
+	}
+};
