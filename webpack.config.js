@@ -1,44 +1,39 @@
 const path = require ('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge');//Этот модуль нужен чтобы в webpack.config.js склеивать различные модули, вместо object.assign - теперь кажыдй модуль можно записать в другой файл (как pug.js) и подключить к webpack.config.js
+const pug = require ('./webpack/pug');//Подключаем модуль с pug для webpack.config.js ,кстати можно не указывать .js webpack и так всё понимает
+const devserver = require('./webpack/devserver');
 
 const PATHS = {//Объект с двумя свойствами
 	source: path.join(__dirname, 'source'),
 	build: path.join(__dirname, 'build')
 };
 
-const common= {
-	entry: {
-		'index': PATHS.source + '/pages/index/index.js',//Обрати внимание для кадой страницы мы создаём свою точку входа которая начинается с .js файла
-		'blog': PATHS.source + '/pages/blog/blog.js'
+const common= merge([//модуль merge -  заменяет метод assign т.к. он более наглядный, мы просто передаём массив объектов, которые нужно склеить.
+	{//Первый объект
+		entry: {
+			'index': PATHS.source + '/pages/index/index.js',//Обрати внимание для кадой страницы мы создаём свою точку входа которая начинается с .js файла
+			'blog': PATHS.source + '/pages/blog/blog.js'
+		},
+		output: {
+			path: PATHS.build,
+			filename: '[name].js'//[name]  - плэйхолдер, в него будут автоматически подставляться имена точек входа
+		},
+		plugins:[
+			new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
+				filename:'index.html',//Задаём имя генерируемому файлу
+				chunks: ['index'],
+				template: PATHS.source + '/pages/index/index.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
+			}),
+			new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
+				filename:'blog.html',//Задаём имя генерируемому файлу
+				chunks: ['blog'],
+				template: PATHS.source + '/pages/blog/blog.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
+			})
+		],
 	},
-	output: {
-		path: PATHS.build,
-		filename: '[name].js'//[name]  - плэйхолдер, в него будут автоматически подставляться имена точек входа
-	},
-	plugins:[
-		new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
-			filename:'index.html',//Задаём имя генерируемому файлу
-			chunks: ['index'],
-			template: PATHS.source + '/pages/index/index.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
-		}),
-		new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
-			filename:'blog.html',//Задаём имя генерируемому файлу
-			chunks: ['blog'],
-			template: PATHS.source + '/pages/blog/blog.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
-		})
-	],
-	module:{
-		rules: [
-			{//Тут описываем натройки лоадера
-				test: /\.pug$/,
-				loader:'pug-loader',//настраиваем pug-loader
-				options:{
-					pretty: true//сделать код компилируемого файла "красивого" раставляем отступы , переносы и т.д.
-				}
-			}
-		]
-	}
-}
+	pug()//Второй объект, pug(т.к. это объект, то для этого мы используем merge, который у нас инициализирван файлом (см выше в самом начале), в котором есть описание этого плагина
+]);
 
 const developmentConfig ={
 	devServer: {//Можно легко изменить порт, по которому будет находиться сайт и куча других настроек в пункте dev-server
@@ -55,10 +50,11 @@ module.exports = function(env){
 		return common;
 	}
 	if (env === 'development'){
-		return Object.assign(//Метод assign нужен чтобы склеивать объекты. Он принимает три аргумента
-			{},//Первый аргумент - пустой объект, как я понимаю туда будут записываться два других объекта.
+		//return Object.assign(//Метод assign нужен чтобы склеивать объекты. Он принимает три аргумента
+			//{},//Первый аргумент assign должен быть пустым объектом, как я понимаю туда будут записываться два других объекта.
+		return merge([//модуль merge -  заменяет метод assign см выше в комменатриях , т.к. он более наглядный, мы просто передаём массив объектов, которые нужно склеить.
 			common,//Второй и третий аргументы - объекты которые должны быть склеены
-			developmentConfig
-		)
+			devserver()//Подключаем модуль devserver, который у нас инициализирван файлом (см выше в самом начале), в котором есть описание этого плагина
+		])
 	}
 };
