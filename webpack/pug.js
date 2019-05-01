@@ -1,8 +1,8 @@
 module.exports = function(){
 	return {
 		module:{
-			rules: [
-				{//Тут описываем натройки лоадера
+			rules: [//тут указываем массив настроек для лоадеров
+				{//Тут описываем настройки лоадера
 					test: /\.pug$/,
 					loader:'pug-loader',//настраиваем pug-loader
 					options:{
