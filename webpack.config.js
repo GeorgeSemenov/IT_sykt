@@ -4,6 +4,7 @@ const merge = require('webpack-merge');//Этот модуль нужен что
 const pug = require ('./webpack/pug');//Подключаем модуль с pug для webpack.config.js ,кстати можно не указывать .js webpack и так всё понимает
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');//Напомню, что сами стили(допустим blog.scss) нужно подключать через соответствеющие js файлы (blog.js)
+const css = require('./webpack/css');//Модуль для обработки файлов .css напомню что такие файлы нужно подключать особо в каждый соответствующий js файлы (к примеру для index.html нужно подключать в index.js)
 
 const PATHS = {//Объект с двумя свойствами
 	source: path.join(__dirname, 'source'),
@@ -56,7 +57,8 @@ module.exports = function(env){
 		return merge([//модуль merge -  заменяет метод assign см выше в комменатриях , т.к. он более наглядный, мы просто передаём массив объектов, которые нужно склеить.
 			common,//Второй и третий аргументы - объекты которые должны быть склеены
 			devserver(),//Подключаем модуль devserver, который у нас инициализирван файлом (см выше в самом начале), в котором есть описание этого плагина
-			sass()
+			sass(),
+			css()
 		])
 	}
 };
