@@ -5,6 +5,7 @@ const pug = require ('./webpack/pug');//Подключаем модуль с pug
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');//Напомню, что сами стили(допустим blog.scss) нужно подключать через соответствеющие js файлы (blog.js)
 const css = require('./webpack/css');//Модуль для обработки файлов .css напомню что такие файлы нужно подключать особо в каждый соответствующий js файлы (к примеру для index.html нужно подключать в index.js)
+const extractCss = require('./webpack/css.extract');//Модуль для извлечения стилей в отдельный(ые) файл(ы) и дальнейшего подключения к проекту
 
 const PATHS = {//Объект с двумя свойствами
 	source: path.join(__dirname, 'source'),
@@ -49,7 +50,10 @@ const developmentConfig ={
 
 module.exports = function(env){
 	if (env === 'production'){// env - параметр который передаётся в npm scripts - загляни в package.jsone
-		return common;
+		return merge([
+			common,
+			extractCss()//Отделяем файлы стилей в продакшене, хотя ничто не мешает это делать в common(т.е. всегда), напоминаю этот модуль заменяет собой style-loader, т.е. теперь стили не будут писаться инлайно в html файле, а будут вынесены в отдельный файлик.
+		])
 	}
 	if (env === 'development'){
 		//return Object.assign(//Метод assign нужен чтобы склеивать объекты. Он принимает три аргумента
