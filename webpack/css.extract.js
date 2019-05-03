@@ -1,33 +1,25 @@
 //Этот модуль нужен, чтобы загружать стили не инлайно, как это делается по умаолчанию а отдельным файлом.
 //В маленьких проектах инлайно конечно будет быстрее, но в больших - большие стили подгружаются параллельно допустим хедеру или ещё какому-то файлу
-const ExtractTextPlugin = require('extract-text-webpack-plugin');//Этот плагин выполняет задачу подключения различных css файлов, т.е. заменяет собой style-loader
+const ExtractTextPlugin = require('mini-css-extract-plugin');//Этот плагин выполняет задачу подключения различных css файлов, т.е. заменяет собой style-loader
 
-module.exports = function(paths){//paths - необходим, т.к. sass-loader скомпилирует новые файлы.css из файлов.scss и чтобы с ними нужно дальше работать нужно запомнить новые пути, они и будут записанны в paths, который в последствии передастся в include
+module.exports = function(){//Тут почему не нужен paths возможно paths - это архаизм от сболее старых весрий webpack?
 	return {
 		module: {
 			rules: [//тут указываем массив настроек для лоадеров
 				{//Тут описываем настройки лоадера
 					test: /\.scss$/,
-					include: paths, //ключ include принимает значение - массив путей или файлов где импортированные файлы будут трансформированны лоадером
-					use: ExtractTextPlugin.extract({
-						publicPath: '../',//Этот ключ обязательно нужно указать , чтобы пути к картинкам для фоновых изображений, указанных в css файлах были правильными после сборки
-						fallback: 'style-loader',//В тех случаях когда extractTextPlugin - не сможет выполнить свою работу, будет выполнены лоадер описанный в ключе fallback (т.к. extractTextPlugin заменяет style-loader, то лонично передать в случае проавала управление style лоадеру)
-						use: ['css-loader', 'sass-loader'],
-					}),
+					use: ['style-loader', ExtractTextPlugin.loader, 'css-loader', 'sass-loader'],
 				},
-				{
+				{//Тут описываем настройки лоадера
 					test: /\.css$/,
-					include: paths, //ключ include принимает значение - массив путей или файлов где импортированные файлы будут трансформированны лоадером
-					use: ExtractTextPlugin.extract({
-						publicPath: '../',
-						fallback: 'style-loader',
-						use: 'css-loader',
-					}),	
-				}
+					use: ['style-loader', ExtractTextPlugin.loader, 'css-loader'],
+				},
 			],
 		},
 		plugins:[
-			new ExtractTextPlugin('./css/[name].css'),
+			new ExtractTextPlugin({
+				filename: './css/[name].css',//Плагин будет создавать внешний css файл в котором будут находиться стили обработанные этим модулем, имя файла будет зависить от входной точки (entry) в common модуле webpack.config.js и будет оно положенно, где находится точка выхода в том-же common модуле webpack.config.js и ещё завёрнуто в папку css
+			}),
 		],
 	};
 };

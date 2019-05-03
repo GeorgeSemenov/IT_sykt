@@ -52,6 +52,8 @@ module.exports = function(env){
 	if (env === 'production'){// env - параметр который передаётся в npm scripts - загляни в package.jsone
 		return merge([
 			common,
+			//sass(),
+			//css()
 			extractCss()//Отделяем файлы стилей в продакшене, хотя ничто не мешает это делать в common(т.е. всегда), напоминаю этот модуль заменяет собой style-loader, т.е. теперь стили не будут писаться инлайно в html файле, а будут вынесены в отдельный файлик.
 		])
 	}
