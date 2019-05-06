@@ -10,7 +10,7 @@ module.exports = function(){//Тут почему не нужен paths возм
 					test: /\.scss$/,
 					use: ['style-loader', ExtractTextPlugin.loader, 'css-loader', 'sass-loader'],
 				},
-				{//Тут описываем настройки лоадера
+				{//Тут описываем настройки лоадера для css т.к. мы будем обрабатывать ещё и normalize.css поэтому простые .css файлы
 					test: /\.css$/,
 					use: ['style-loader', ExtractTextPlugin.loader, 'css-loader'],
 				},

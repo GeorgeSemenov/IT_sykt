@@ -1,4 +1,5 @@
 const path = require ('path');
+const webpack = require('webpack');//Это нужно что бы появилась возможность выделить код webpack из кода js файлов (index.js и blog.js), для этого мы будем использовать метод optimize
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');//Этот модуль нужен чтобы в webpack.config.js склеивать различные модули, вместо object.assign - теперь кажыдй модуль можно записать в другой файл (как pug.js) и подключить к webpack.config.js
 const pug = require ('./webpack/pug');//Подключаем модуль с pug для webpack.config.js ,кстати можно не указывать .js webpack и так всё понимает
@@ -20,20 +21,26 @@ const common= merge([//модуль merge -  заменяет метод assign 
 		},
 		output: {
 			path: PATHS.build,
-			filename: '[name].js'//[name]  - плэйхолдер, в него будут автоматически подставляться имена точек входа
+			filename: 'js/[name].js'//[name]  - плэйхолдер, в него будут автоматически подставляться имена точек входа
 		},
 		plugins:[
-			new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
+			new HtmlWebpackPlugin({// создаём страничку html
 				filename:'index.html',//Задаём имя генерируемому файлу
-				chunks: ['index'],
-				template: PATHS.source + '/pages/index/index.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
+				chunks: ['index', 'common'],//Добавляет на страницу только те файлы, которые начинаются с index (допустим index.js index.css даже несмотря на то что они находятся в отельных папках css/ и js/)
+				template: PATHS.source + '/pages/index/index.pug'//в данный плагин мы передадим шаблон разметки pug но сразу же скомпилированную (pug-loader'oм), проще говоря плагин сверстает страницу изходя из разметки, которую ему предоставит pug плагин (см он подключени ниже) после обработки этого шаблона
 			}),
-			new HtmlWebpackPlugin({// создаём страничку html с нужным тайтлом.
+			new HtmlWebpackPlugin({// создаём страничку html
 				filename:'blog.html',//Задаём имя генерируемому файлу
-				chunks: ['blog'],
+				chunks: ['blog', 'common'],//Добавляет на страницу только те файлы, которые начинаются с blog (допустим blog.js blog.css даже несмотря на то что они находятся в отельных папках css/ и js/)
 				template: PATHS.source + '/pages/blog/blog.pug'//в данный плагин мы передадим разметку pug но сразу же скомпилированную (pug-loader'oм)
 			})
 		],
+		optimization:{
+			splitChunks:{
+				chunks: 'all',//Указывает какие чанки (модули с используемым кодом) будут оптимизироваться (удалятся повторяющийся код и выносится в другой файл), возможные значения 'all'(проверяет все чанки) 'async'(Проверяет только асинхронные) 'initial'
+				name: 'common'//Файлы с общим кодом будут называться common.js и common.css, если имя не написать, то там будет vendor~index~blog.js или (css) 
+			}
+		}
 	},
 	pug()//Второй объект, pug(т.к. это объект, то для этого мы используем merge, который у нас инициализирван файлом (см выше в самом начале), в котором есть описание этого плагина
 ]);
@@ -52,8 +59,6 @@ module.exports = function(env){
 	if (env === 'production'){// env - параметр который передаётся в npm scripts - загляни в package.jsone
 		return merge([
 			common,
-			//sass(),
-			//css()
 			extractCss()//Отделяем файлы стилей в продакшене, хотя ничто не мешает это делать в common(т.е. всегда), напоминаю этот модуль заменяет собой style-loader, т.е. теперь стили не будут писаться инлайно в html файле, а будут вынесены в отдельный файлик.
 		])
 	}
