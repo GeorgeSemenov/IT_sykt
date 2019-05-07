@@ -1,5 +1,6 @@
 ul {
-  border: 1px solid #777; }
+  border: 1px solid #777;
+  background: url(/./images/menu.png) no-repeat 0px 10%; }
   ul li {
     display: inline-block;
     padding: 5px 10px;
@@ -8,5 +9,3 @@ ul {
 h1 {
   color: green; }
 
-
-/*# sourceMappingURL=blog.css.map*/
