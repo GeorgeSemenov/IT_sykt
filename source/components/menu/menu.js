@@ -1,5 +1,4 @@
 import './menu.scss';
-import 'normalize.css';
 
 export default function (array, className){// из этого файла возвращается функция, у которой два параметра массив пунктов меню и второй класс, который нужно будет присвоить тегу ul
 	var menu = document.createElement("ul");//добавляем элемент ul

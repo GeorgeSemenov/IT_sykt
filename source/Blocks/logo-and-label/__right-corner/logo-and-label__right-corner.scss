@@ -1,0 +1,6 @@
+.logo-and-label__right-corner {
+  position: absolute;
+  right: 0;
+  border-left: $corner-width solid $bkgrdClr;
+  border-bottom: $logo-and-label-height transparent solid;
+}

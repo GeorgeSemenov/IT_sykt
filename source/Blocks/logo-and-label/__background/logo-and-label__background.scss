@@ -1,0 +1,7 @@
+.logo-and-label__background {
+  position: absolute;
+  background-color: $bkgrdClr;
+  left: (-1)*$corner-width;
+  width: 100%;
+  height: $logo-and-label-height;
+}

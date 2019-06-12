@@ -1,0 +1,6 @@
+include __address/mail__address.pug
+include __pic/mail__pic.pug
+mixin mail(modifier)
+  .mail&attributes(attributes)
+    +mail__pic()
+    +mail__address()

@@ -1,1 +1,6 @@
 node_modules
+comipush.sh
+commit.sh
+create_block.bat
+create_elemeficator.bat
+create_modificator.bat

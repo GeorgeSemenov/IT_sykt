@@ -1,0 +1,10 @@
+$bkgrdClr: #e6e6e6;
+$corner-width: 94px;
+$logo-and-label-height: 130px;
+
+.header__logo-and-label {
+  position: relative;
+  width: 850px;
+}
+
+@import "../../logo-and-label/logo-and-label";

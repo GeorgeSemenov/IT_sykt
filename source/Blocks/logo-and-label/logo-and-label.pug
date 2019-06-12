@@ -1,0 +1,10 @@
+include __logo/logo-and-label__logo
+include __background/logo-and-label__background
+include __right-corner/logo-and-label__right-corner
+include __label/logo-and-label__label
+mixin logo-and-label(modifier)
+  .logo-and-label&attributes(attributes)
+    +logo-and-label__background() 
+    +logo-and-label__right-corner() 
+    +logo-and-label__logo()
+    +logo-and-label__label()

@@ -1,0 +1,6 @@
+include ../logo-and-label/logo-and-label.pug
+include ../mail/mail.pug
+mixin header(modifier)
+  .header&attributes(attributes)
+    +logo-and-label()(class="header__logo-and-label")
+    +mail(class="header__mail")
