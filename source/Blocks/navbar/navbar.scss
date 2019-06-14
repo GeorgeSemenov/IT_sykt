@@ -1,0 +1,16 @@
+$navbar-height:50px;
+$left-corner-width: 37px;
+$bkgrnd-clr: #663333;
+.navbar {
+  //Наследует бустраповыский класс .navbar
+  @extend .navbar;
+
+}
+@import '__toggler/navbar__toggler';
+@import '__toggler-icon/navbar__toggler-icon';
+@import '__collapse/navbar__collapse';
+@import '__nav/navbar__nav';
+@import '__nav-item/navbar__nav-item';
+@import '__nav-link/navbar__nav-link';
+@import '__dropdown/navbar__dropdown';
+@import '__left-corner/navbar__left-corner';

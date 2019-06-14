@@ -1,0 +1,4 @@
+include ../__toggler-icon/navbar__toggler-icon.pug
+mixin navbar__toggler(modifier)
+  button.navbar__toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation")&attributes(attributes)
+    +navbar__toggler-icon()

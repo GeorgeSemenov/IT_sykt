@@ -12,9 +12,9 @@ module.exports = function(){
 			rules: [//тут указываем массив настроек для лоадеров
 				{//Тут описываем настройки лоадера
 					test: /\.(jpg|png|svg)$/,
-					loader:'file-loader?name=/images/[name].[ext]',//настраиваем file-loader
+						loader:'file-loader?name=/images/[name].[ext]',//настраиваем file-loader не ясно зачем тут вообще нужна маска, если заменить images на images 22222 ничего не изменится
 					options:{
-						name: './images/[name].[ext]'//указываем маску как будут называться картинки, они будут сохранять свои изначальные имена [name] и разширения [ext]
+						name: '/images/[name].[ext]'//указываем маску как будут называться картинки, они будут сохранять свои изначальные имена [name] и разширения [ext]
 					}
 				}
 			]

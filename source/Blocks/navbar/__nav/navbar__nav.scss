@@ -1,0 +1,5 @@
+.navbar__nav {
+  @extend .navbar-nav;
+
+  background-color: $bkgrnd-clr;
+}

@@ -1,0 +1,11 @@
+.phone-number__number {
+  font-family: open_sans;
+  font-weight: 700;
+  color: #505050;
+  position: relative;
+
+  @include media-breakpoint-down(md){
+    font-size: 13px;
+    bottom: 2px;
+  }
+}

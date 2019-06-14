@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --env production",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open --env development",
+    "start": "webpack-dev-server --env development",
     "serv": "static build"
   },
   "keywords": [],
@@ -38,6 +38,8 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }

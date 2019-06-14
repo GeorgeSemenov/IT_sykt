@@ -1,0 +1,8 @@
+.dropdown {
+  //Расжиряем класс дропдаун у бутстрапа
+  @extend .dropdown;
+}
+@import '__toggle/dropdown__toggle';
+@import '__menu/dropdown__menu';
+@import '__item/dropdown__item';
+@import '__divider/dropdown__divider';

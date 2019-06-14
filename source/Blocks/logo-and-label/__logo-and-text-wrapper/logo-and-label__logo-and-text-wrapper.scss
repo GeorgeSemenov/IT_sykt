@@ -1,0 +1,22 @@
+.logo-and-label__logo-and-text-wrapper {
+  $w: 279px;
+  $r: 81px;
+  $t: 20px;
+  
+  position: absolute;
+  width: $w;
+  right: $r;
+  top: $t;
+
+  @include media-breakpoint-down(md){
+    width: $w/2;
+    right: $r/2;
+    top: $t/2;
+  }
+
+  @include media-breakpoint-down(xs){
+    width: $w/3;
+    right: $r/3;
+    top: $t/3;
+  }
+}

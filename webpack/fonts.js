@@ -5,6 +5,9 @@ module.exports = function(){
 				{//Тут описываем настройки лоадера
 					test: /\.(eot|svg|ttf|woff|woff2)$/,
 					loader:'file-loader',//настраиваем file-loader, чтобы он работал только со шрифтами
+					options:{
+						name:'/fonts/[name].[ext]'
+					}
 				}
 			]
 		}

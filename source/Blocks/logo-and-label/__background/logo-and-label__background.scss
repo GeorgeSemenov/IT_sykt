@@ -4,4 +4,13 @@
   left: (-1)*$corner-width;
   width: 100%;
   height: $logo-and-label-height;
+
+  @include media-breakpoint-down(md){
+    left: (-1)*$corner-width/2;
+    height: $logo-and-label-height/2;
+  }
+  @include media-breakpoint-down(xs){
+    left: (-1)*$corner-width/3;
+    height: $logo-and-label-height/3;
+  }
 }

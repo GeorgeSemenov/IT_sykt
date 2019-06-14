@@ -1,3 +1,9 @@
-.header {}
+.header {
+  //эта строка нужна, чтобы в хроме правильно высчитывался
+  //Процентаж left
+  position: relative;
+
+}
 @import '__logo-and-label/header__logo-and-label';
-@import '__mail/header__mail';
+@import '__contacts/header__contacts';
+@import '../navbar/navbar';@import '__navbar/header__navbar';

@@ -3,4 +3,13 @@
   right: 0;
   border-left: $corner-width solid $bkgrdClr;
   border-bottom: $logo-and-label-height transparent solid;
+
+  @include media-breakpoint-down(md){
+    border-left-width: $corner-width/2;
+    border-bottom-width: $logo-and-label-height/2;
+  }
+  @include media-breakpoint-down(xs){
+    border-left-width: $corner-width/3;
+    border-bottom-width: $logo-and-label-height/3;
+  }
 }

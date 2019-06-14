@@ -1,0 +1,7 @@
+include ../__nav-item/navbar__nav-item.pug 
+include ../../dropdown/dropdown.pug 
+mixin navbar__nav(modifier)
+  ul.navbar__nav.mr-auto&attributes(attributes)
+    +dropdown("О&nbsp;компании",["Реквизиты", "Шаблоны&nbsp;договора","Политика,конфиденциальности"])(class="navbar__nav-item")
+    +dropdown()(class="navbar__nav-item")
+    +navbar__nav-item()

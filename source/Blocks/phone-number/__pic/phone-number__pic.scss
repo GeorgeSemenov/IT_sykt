@@ -1,0 +1,10 @@
+.phone-number__pic {
+  position: relative;
+  bottom: 4px;
+  width: 14.1%;
+  height: $phone-number-width*0.141;
+
+  @include media-breakpoint-down(md){
+    height: $phone-number-width*0.141/1.3;
+  }
+}

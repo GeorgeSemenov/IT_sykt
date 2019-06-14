@@ -1,3 +1,6 @@
-.mail {}
+.mail {
+  display: flex;
+  justify-content: space-between;
+}
 @import '__pic/mail__pic';
 @import '__address/mail__address';
