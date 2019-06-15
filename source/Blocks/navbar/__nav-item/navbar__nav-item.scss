@@ -1,3 +1,13 @@
 .navbar__nav-item {
   @extend .nav-item;
+
+  font-family: open_sans;
+  font-size: 15px;
+
+  @include media-breakpoint-up(sm){
+    position: relative;
+    top: 13px;
+    left: 15px;
+
+  }
 }

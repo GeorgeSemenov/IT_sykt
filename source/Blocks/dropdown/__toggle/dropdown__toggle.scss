@@ -1,3 +1,14 @@
 .dropdown__toggle {
   @extend .dropdown-toggle;
+
+  &::after{
+    position: relative;
+    left: 6px;
+    top: 2px;
+  }
 }
+//к несчастью не смог понять почему colo:white!importan
+//В .dropdown__toggle не даёт результат, хотя по стилями 
+//он имеет преимущество и в режиме разработчика FF он показывает
+// это но рендерится сайт так, как буд-то цвет совсем другой
+.navbar-light .navbar__nav .nav-link{color:$color;}

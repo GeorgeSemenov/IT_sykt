@@ -1,0 +1,8 @@
+include ../mail/mail.pug
+include ../phone-number/phone-number.pug
+include ../feedback-button/feedback-button.pug
+mixin contacts(modifier)
+  .contacts&attributes(attributes)
+    +phone-number(class="contacts__phone-number")
+    +mail(class="contacts__mail")
+    +feedback-button(class="contacts__feedback-button")

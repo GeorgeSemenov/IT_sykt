@@ -1,1 +1,13 @@
-.header__navbar {}
+.header__navbar {
+
+  @include media-breakpoint-up(sm){
+    position: absolute;
+    width: 88%;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+  }
+  @include media-breakpoint-up(md){
+    width: 59%;
+  }
+}

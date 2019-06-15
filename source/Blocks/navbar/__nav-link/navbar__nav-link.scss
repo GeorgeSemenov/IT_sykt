@@ -1,3 +1,17 @@
 .navbar__nav-link {
   @extend .nav-link ;
+
+  color: $color;
+
+  @include media-breakpoint-up(sm){
+    border-right: solid 1px #4e2020;
+    padding:3px 8px;
+    padding-right: 10px !important;
+    margin-right: 5px;
+  }
+
+  @include media-breakpoint-up(lg){
+    padding-right: 35px !important;
+    margin-right: 21px;
+  }
 }

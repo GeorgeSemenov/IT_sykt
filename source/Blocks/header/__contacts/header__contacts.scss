@@ -7,6 +7,4 @@ $feedback-button-width: 150px;
   left: 43.8%;
 }
 
-@import '../__mail/header__mail';
-@import '../__phone-number/header__phone-number';
-@import '../__feedback-button/header__feedback-button';
+@import '../../contacts/contacts';

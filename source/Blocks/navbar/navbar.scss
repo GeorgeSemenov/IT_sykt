@@ -1,10 +1,12 @@
 $navbar-height:50px;
 $left-corner-width: 37px;
 $bkgrnd-clr: #663333;
+$color: white !important;
 .navbar {
   //Наследует бустраповыский класс .navbar
   @extend .navbar;
-
+  color: $color;
+  
 }
 @import '__toggler/navbar__toggler';
 @import '__toggler-icon/navbar__toggler-icon';

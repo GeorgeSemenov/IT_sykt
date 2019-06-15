@@ -1,6 +1,6 @@
 include __menu/dropdown__menu.pug
 include __toggle/dropdown__toggle.pug
-mixin dropdown(textForDropdownToggle, items, tag="li", classForDropdownToggle="nav-link")
+mixin dropdown(classForDropdownToggle="",textForDropdownToggle, items, tag="li")
   #{tag}.dropdown&attributes(attributes)
     +dropdown__toggle(textForDropdownToggle)(class=classForDropdownToggle)
     +dropdown__menu(items)

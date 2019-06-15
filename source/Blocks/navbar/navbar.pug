@@ -2,7 +2,7 @@ include __left-corner/navbar__left-corner.pug
 include __collapse/navbar__collapse.pug
 include __toggler/navbar__toggler.pug
 mixin navbar(modifier)
-  nav.navbar.navbar-expand-lg.navbar-light.bg-light&attributes(attributes)
+  nav.navbar.navbar-expand-sm.navbar-light&attributes(attributes)
     +navbar__left-corner()
     +navbar__toggler()
     +navbar__collapse()

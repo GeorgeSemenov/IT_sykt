@@ -1,8 +1,8 @@
-include __contacts/header__contacts.pug
+include ../contacts/contacts.pug
 include ../logo-and-label/logo-and-label.pug
 include ../navbar/navbar.pug
 mixin header(modifier)
   .header&attributes(attributes)
     +logo-and-label()(class="header__logo-and-label")
-    +header__contacts()
-    +navbar()
+    +contacts(class="header__contacts")
+    +navbar()(class="header__navbar")

@@ -1,6 +1,7 @@
 include ../__divider/dropdown__divider.pug
 include ../__item/dropdown__item.pug
 mixin dropdown__menu(items=['Домашние&nbsp;переезды',"Офисные&nbsp;переезды","Дачные&nbsp;переезды","Грузоперевозки&nbsp;по&nbsp;России"])
-  .dropdown__menu&attributes(attributes)
+  //-Пришлось добавить dropdown-menu потому что этот класс имеет вложенные свойства зависящие от других классов, проще говоря иначе не будет выпадать менюшка
+  .dropdown__menu.dropdown-menu&attributes(attributes)
     each item in items
       +dropdown__item(item)
