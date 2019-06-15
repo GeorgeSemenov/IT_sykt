@@ -1,3 +1,7 @@
 .dropdown__menu {
   @extend .dropdown-menu;
+
+  @include media-breakpoint-up(sm){
+    top: 36px;
+  }
 }

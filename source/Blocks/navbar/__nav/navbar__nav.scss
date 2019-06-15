@@ -6,4 +6,8 @@
   @include media-breakpoint-up(sm){
     height: $navbar-height;
   }
+
+  @include media-breakpoint-down(xs){
+    align-items: center;
+  }
 }

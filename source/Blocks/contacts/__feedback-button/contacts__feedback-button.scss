@@ -1,10 +1,21 @@
 .contacts__feedback-button {
-  position: absolute;
   border: solid 1px;
-  left:$phone-number-width + $mail-width + 59px;
-  top: 40px;
   width: $feedback-button-width;
   height: 40px;
+
+  @include media-breakpoint-up(sm){
+    position: absolute;
+    left:$phone-number-width + $mail-width + 44px;
+    top: 40px;
+  }
+  @include media-breakpoint-up(xl){
+    left:$phone-number-width + $mail-width + 59px;
+  }
+
+  @include media-breakpoint-down(xs){
+    margin-left:auto;
+    margin-right: auto;
+  }
 
   @include media-breakpoint-down(md){
     height: 30px;

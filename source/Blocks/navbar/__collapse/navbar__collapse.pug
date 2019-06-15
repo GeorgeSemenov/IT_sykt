@@ -1,4 +1,6 @@
 include ../__nav/navbar__nav.pug
+include ../../contacts/contacts.pug
 mixin navbar__collapse(modifier)
   .navbar__collapse(class="navbar-collapse" id="navbarSupportedContent")&attributes(attributes)
     +navbar__nav()
+    +contacts()(class="navbar__contacts navbar__contacts_bkg_white d-sm-none")

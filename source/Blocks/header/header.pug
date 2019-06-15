@@ -4,5 +4,5 @@ include ../navbar/navbar.pug
 mixin header(modifier)
   .header&attributes(attributes)
     +logo-and-label()(class="header__logo-and-label")
-    +contacts(class="header__contacts")
+    +contacts(class="header__contacts d-none d-sm-flex")
     +navbar()(class="header__navbar")
