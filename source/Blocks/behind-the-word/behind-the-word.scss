@@ -1,0 +1,9 @@
+.behind-the-word {
+  height: 500px;
+  background-image: url("../../img/behind-the-word/mad-driver.png");
+  background-size: auto 100%;
+  background-position: center;
+  position: relative;
+}
+@import '__title/behind-the-word__title';
+@import '__line-with-corner/behind-the-word__line-with-corner';

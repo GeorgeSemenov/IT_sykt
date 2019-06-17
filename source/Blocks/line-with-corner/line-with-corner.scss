@@ -1,0 +1,8 @@
+$left-corner-width: 25px;
+$line-height: 25px;
+.line-with-corner {
+
+}
+@import '__left-corner/line-with-corner__left-corner';
+@import '__thick-line/line-with-corner__thick-line';
+@import '__right-corner/line-with-corner__right-corner';

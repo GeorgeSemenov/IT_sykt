@@ -1,0 +1,20 @@
+.behind-the-word__title {
+  font-family: "Open Sans";
+  font-weight: 800;
+  color: #fff;
+  font-size: 30px;
+  right: 26.5%;
+  bottom: 17.2%;
+  line-height: 45px;
+  position: absolute;
+
+  @include media-breakpoint-down(md){
+    font-size: 24px;
+    right: 14.5%;
+    bottom: 13.2%;
+  }
+  @include media-breakpoint-down(sm){
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

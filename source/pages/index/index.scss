@@ -1,11 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 @import "../../components/UnCss";
+
+// Блоки
 @import "../../Blocks/header/header";
+@import "../../Blocks/behind-the-word/behind-the-word";
+@import "../../Blocks/our-services/our-services";
 
 // Шрифты
 @import "../../fonts/FuturaPT/stylesheet";
-@import "../../fonts/Open_Sans/stylesheet";
+@import "../../fonts/OpenSans/stylesheet";
 
 body{
   background-color: #fff;
+}
+.our-services{
+  margin-top: 90px;
+  position: relative;
 }
