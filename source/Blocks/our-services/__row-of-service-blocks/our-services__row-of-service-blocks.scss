@@ -1,0 +1,9 @@
+.our-services__row-of-service-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(lg){
+    justify-content: space-around;
+  }
+}

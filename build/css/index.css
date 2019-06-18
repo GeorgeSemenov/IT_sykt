@@ -7123,9 +7123,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.header {
-  position: relative;
-  height: 170px; }
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+    padding: 0; } }
+
+body {
+  overflow-x: hidden; }
 
 .header__logo-and-label {
   position: relative;
@@ -7167,7 +7171,8 @@ table {
   @media (max-width: 575.98px) {
     .logo-and-label__right-corner {
       border-left-width: 31.33333px;
-      border-bottom-width: 43.33333px; } }
+      border-bottom-width: 43.33333px;
+      right: +1px; } }
 
 .logo-and-label__label {
   position: absolute;
@@ -7239,7 +7244,7 @@ table {
   width: 11.2%; }
 
 .mail__address {
-  font-family: open_sans;
+  font-family: "Open Sans";
   font-weight: 700;
   color: #505050; }
 
@@ -7272,7 +7277,7 @@ table {
       height: 18.22154px; } }
 
 .phone-number__number {
-  font-family: open_sans;
+  font-family: "Open Sans";
   font-weight: 700;
   color: #505050;
   position: relative; }
@@ -7413,14 +7418,187 @@ table {
 .behind-the-word {
   height: 500px;
   background-image: url(/pereezd/images/mad-driver.png);
+  background-size: auto 100%;
+  background-position: center;
   position: relative; }
 
 .behind-the-word__title {
-  font-family: "sansOpenExtraBold";
+  font-family: "Open Sans";
   font-weight: 800;
   color: #fff;
   font-size: 30px;
+  right: 26.5%;
+  bottom: 17.2%;
+  line-height: 45px;
   position: absolute; }
+  @media (max-width: 991.98px) {
+    .behind-the-word__title {
+      font-size: 24px;
+      right: 14.5%;
+      bottom: 13.2%; } }
+  @media (max-width: 767.98px) {
+    .behind-the-word__title {
+      font-size: 20px;
+      line-height: 30px; } }
+
+.our-services {
+  background-color: #fff; }
+
+.our-services__section-title {
+  margin-top: 34px;
+  margin-bottom: 15px; }
+
+.section-title__title {
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 30px;
+  color: #252525; }
+  @media (max-width: 767.98px) {
+    .section-title__title {
+      font-size: 21px; } }
+
+.section-title__underline {
+  height: 3px;
+  width: 80px;
+  margin-top: 27px;
+  margin-left: 2px;
+  background-color: #d12c2c; }
+
+.section-title_color_white .section-title__title {
+  color: #ffffff; }
+
+.our-services__text {
+  font-family: "open sans";
+  font-size: 13px;
+  line-height: 24px;
+  margin-top: 30px; }
+  @media (min-width: 992px) {
+    .our-services__text {
+      margin-top: 78px; } }
+
+.our-services__row-of-service-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media (max-width: 1199.98px) {
+    .our-services__row-of-service-blocks {
+      justify-content: space-around; } }
+
+.our-services__service-block {
+  width: 300px;
+  height: 180px;
+  position: relative;
+  margin-bottom: 30px; }
+
+.service-block__pic {
+  width: 100%;
+  height: 100%; }
+
+.service-block__line-with-corner {
+  position: absolute;
+  bottom: -25px; }
+
+.line-with-corner {
+  display: flex; }
+
+.line-with-corner__thick-line {
+  position: relative; }
+
+.line-with-corner_theme_right-up-green-static .line-with-corner__left-corner {
+  display: none; }
+
+.line-with-corner_theme_right-up-green-static .line-with-corner__thick-line {
+  height: 25px;
+  width: 192px;
+  background-color: #518a32;
+  display: inline-block; }
+
+.line-with-corner_theme_right-up-green-static .line-with-corner__right-corner {
+  border-right: 18px solid transparent;
+  border-top: 25px solid #518a32; }
+
+@media (min-width: 992px) {
+  .line-with-corner_theme_big-right-up-green-static .line-with-corner__left-corner {
+    display: none; }
+  .line-with-corner_theme_big-right-up-green-static .line-with-corner__thick-line {
+    height: 40px;
+    width: 330px;
+    background-color: #518a32;
+    display: inline-block; }
+  .line-with-corner_theme_big-right-up-green-static .line-with-corner__right-corner {
+    border-right: 30px solid transparent;
+    border-top: 40px solid #518a32; } }
+
+.line-with-corner_theme_end-of-section-white .line-with-corner__left-corner {
+  display: none; }
+
+.line-with-corner_theme_end-of-section-white .line-with-corner__thick-line {
+  position: relative;
+  left: 18px;
+  height: 25px;
+  background-color: #ffffff; }
+
+.line-with-corner_theme_end-of-section-white .line-with-corner__right-corner {
+  border-right: 18px solid transparent;
+  border-top: 25px solid #ffffff; }
+
+.line-with-corner_theme_end-of-section-vinous .line-with-corner__left-corner {
+  display: none; }
+
+.line-with-corner_theme_end-of-section-vinous .line-with-corner__thick-line {
+  position: relative;
+  height: 25px;
+  background-color: #663333;
+  width: 100%; }
+
+.line-with-corner_theme_end-of-section-vinous .line-with-corner__right-corner {
+  border-right: 18px solid transparent;
+  border-top: 25px solid #663333; }
+
+.service-block__title {
+  font-family: "open sans";
+  font-size: 13px;
+  color: #fffefe;
+  position: absolute;
+  left: 19px;
+  bottom: -18px; }
+
+@media (min-width: 992px) {
+  .our-services__service-block_theme_title-service-block {
+    width: 620px;
+    height: 340px; }
+    .our-services__service-block_theme_title-service-block .line-with-corner {
+      bottom: 55px; }
+    .our-services__service-block_theme_title-service-block .service-block__title {
+      bottom: 68px; } }
+
+@media (max-width: 991.98px) {
+  .our-services__service-block_theme_title-service-block {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px; } }
+
+.our-services__line-with-corner {
+  position: absolute;
+  bottom: 0;
+  width: 20%; }
+
+.our-services__row-of-title-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media (max-width: 1199.98px) {
+    .our-services__row-of-title-blocks {
+      margin-bottom: 25px; } }
+
+.our-advantages__section-title {
+  margin-left: 14px; }
+
+.our-advantages__advantage-block {
+  width: 220px; }
+
+.our-advantages_bkg_vinous {
+  background-color: #663333; }
 
 @font-face {
   font-family: 'Futura PT';
@@ -7649,4 +7827,28 @@ table {
 
 body {
   background-color: #fff; }
+
+.header {
+  position: relative;
+  height: 170px; }
+  @media (max-width: 575.98px) {
+    .header {
+      height: auto; } }
+
+.our-services {
+  margin-top: 70px;
+  margin-bottom: 83px;
+  padding-left: 13px;
+  padding-right: 15px;
+  position: relative; }
+  @media (max-width: 991.98px) {
+    .our-services {
+      margin-top: 25px;
+      padding-bottom: 25px; } }
+
+.our-advantages {
+  margin-top: 110px; }
+  @media (max-width: 991.98px) {
+    .our-advantages {
+      margin-top: 40px; } }
 

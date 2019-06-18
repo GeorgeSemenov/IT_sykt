@@ -1,0 +1,10 @@
+mixin service-block__pic(blockImage="handshake")
+  case blockImage
+    when "handshake"
+      img(alt=(blockImage + "-pic") src=require("../../img/our-services/handshake.png")).service-block__pic&attributes(attributes)
+    when "packages"
+      img.service-block__pic(alt=(blockImage + "-pic") src=require("../../img/our-services/packages.png"))&attributes(attributes)
+    when "house"
+      img.service-block__pic(alt=(blockImage + "-pic") src=require("../../img/our-services/house.png"))&attributes(attributes)
+    when "dalnoboy"
+      img.service-block__pic(alt=(blockImage + "-pic") src=require("../../img/our-services/dalnoboy.png"))&attributes(attributes)

@@ -1,0 +1,6 @@
+include ../../section-title/section-title.pug
+include ../../service-block/service-block.pug
+mixin our-services__row-of-title-blocks(modifier)
+  .our-services__row-of-title-blocks&attributes(attributes)
+    +section-title('НАШИ&nbsp;УСЛУГИ')(class=" our-services__section-title")
+    +service-block("dalnoboy", "Грузоперевозки&nbsp;по&nbsp;России", ' line-with-corner_theme_big-right-up-green-static ')(class=" our-services__service-block our-services__service-block_theme_title-service-block ")

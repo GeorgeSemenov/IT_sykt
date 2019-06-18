@@ -1,8 +1,10 @@
-$left-corner-width: 25px;
-$line-height: 25px;
 .line-with-corner {
-
+  display: flex;
 }
 @import '__left-corner/line-with-corner__left-corner';
 @import '__thick-line/line-with-corner__thick-line';
 @import '__right-corner/line-with-corner__right-corner';
+@import '_theme_right-up-green-static/line-with-corner_theme_right-up-green-static';
+@import '_theme_big-right-up-green-static/line-with-corner_theme_big-right-up-green-static';
+@import '_theme_end-of-section-white/line-with-corner_theme_end-of-section-white';
+@import '_theme_end-of-section-vinous/line-with-corner_theme_end-of-section-vinous';

@@ -11,5 +11,6 @@
   @include media-breakpoint-down(xs){
     border-left-width: $corner-width/3;
     border-bottom-width: $logo-and-label-height/3;
+    right: +1px;
   }
 }

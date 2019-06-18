@@ -1,0 +1,8 @@
+.container{
+  @extend  .container;
+
+  @include media-breakpoint-up(lg){
+    max-width: 970px;
+    padding: 0;
+  }
+}

@@ -1,8 +1,4 @@
 .header {
-  //эта строка нужна, чтобы в хроме правильно высчитывался
-  //Процентаж left
-  position: relative;
-  height: 170px;
 }
 @import '__logo-and-label/header__logo-and-label';
 @import '__contacts/header__contacts';

@@ -1,0 +1,8 @@
+include __title/service-block__title.pug
+include __pic/service-block__pic.pug
+include ../line-with-corner/line-with-corner.pug
+mixin service-block(blockImage, title, classForLineWithCorner="")
+  .service-block&attributes(attributes)
+    +service-block__pic(blockImage)
+    +line-with-corner()(class="line-with-corner_theme_right-up-green-static service-block__line-with-corner " + classForLineWithCorner)
+    +service-block__title(title)

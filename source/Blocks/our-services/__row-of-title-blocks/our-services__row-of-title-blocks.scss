@@ -1,0 +1,8 @@
+.our-services__row-of-title-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include media-breakpoint-down(lg){
+    margin-bottom: 25px;
+  }
+}

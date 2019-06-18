@@ -9,6 +9,7 @@ const css = require('./webpack/css');//Модуль для обработки ф
 const extractCss = require('./webpack/css.extract');//Модуль для извлечения стилей в отдельный(ые) файл(ы) и дальнейшего подключения к проекту
 const images = require('./webpack/images');//Модуль, который обрабатывает изображения
 const fonts = require('./webpack/fonts');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const PATHS = {//Объект с двумя свойствами
 	source: path.join(__dirname, 'source'),
@@ -52,6 +53,12 @@ const common= merge([//модуль merge -  заменяет метод assign 
 	fonts()
 ]);
 
+const clean ={
+	plugins:[
+		new CleanWebpackPlugin()
+	]
+}
+
 const developmentConfig ={
 	devServer: {//Можно легко изменить порт, по которому будет находиться сайт и куча других настроек в пункте dev-server
 		contentBase:'./build',//Указываем директорию, откуда будет строиться сайт на локальном сервере(по умолчанию сразу по адрессу localhost:8080 будет выводиться index.html), если в этой папке будет, например, blog.html , то эта страница будет доступна по https://localhost/blog.html
@@ -70,6 +77,7 @@ module.exports = function(env){
 		return merge([
 			common,
 			extractCss(),//Отделяем файлы стилей в продакшене, хотя ничто не мешает это делать в common(т.е. всегда), напоминаю этот модуль заменяет собой style-loader, т.е. теперь стили не будут писаться инлайно в html файле, а будут вынесены в отдельный файлик.
+			clean
 		])
 	}
 	if (env === 'development'){

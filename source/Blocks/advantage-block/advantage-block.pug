@@ -1,0 +1,8 @@
+include __text/advantage-block__text.pug
+include __title/advantage-block__title.pug
+include __pic/advantage-block__pic.pug
+mixin advantage-block(modifier)
+  .advantage-block&attributes(imgName, title, text)
+    +advantage-block__pic(imgName)
+    +advantage-block__title(title)
+    +advantage-block__text(text)

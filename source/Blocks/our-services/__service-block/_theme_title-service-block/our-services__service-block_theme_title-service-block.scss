@@ -1,0 +1,20 @@
+.our-services__service-block_theme_title-service-block {
+  @include media-breakpoint-up(lg){
+    width: 620px;
+    height: 340px;
+
+    .line-with-corner{
+      bottom: 55px;
+    }
+
+    .service-block__title{
+      bottom: 68px;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+}

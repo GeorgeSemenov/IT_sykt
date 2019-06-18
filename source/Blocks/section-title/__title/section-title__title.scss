@@ -3,4 +3,8 @@
   font-weight: 800;
   font-size: 30px;
   color: #252525;
+
+  @include media-breakpoint-down(sm){
+    font-size: 21px;
+  }
 }

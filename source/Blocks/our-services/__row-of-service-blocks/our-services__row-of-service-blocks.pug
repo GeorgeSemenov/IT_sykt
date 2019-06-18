@@ -1,0 +1,6 @@
+include ../../service-block/service-block.pug
+mixin our-services__row-of-service-blocks(modifier)
+  .our-services__row-of-service-blocks&attributes(attributes)
+    +service-block("handshake")(class=" our-services__service-block ")
+    +service-block("packages", "Офисный&nbsp;переезд")(class=" our-services__service-block ")
+    +service-block("house", "Дачный&nbsp;переезд")(class=" our-services__service-block ")

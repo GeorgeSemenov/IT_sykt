@@ -1,5 +1,8 @@
-include ../section-title/section-title.pug
-include ../line-with-corner/line-with-corner.pug
+include __row-of-title-blocks/our-services__row-of-title-blocks.pug
+include __row-of-service-blocks/our-services__row-of-service-blocks.pug
+include __text/our-services__text.pug
 mixin our-services(modifier)
-  .our-services&attributes(attributes)
-    +section-title('НАШИ&nbsp;УСЛУГИ')(class=" our-services__section-title")
+  section.our-services.container&attributes(attributes)
+    +our-services__row-of-title-blocks()
+    +our-services__row-of-service-blocks()
+    +our-services__text()

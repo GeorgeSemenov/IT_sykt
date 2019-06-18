@@ -1,0 +1,25 @@
+.line-with-corner_theme_end-of-section-white {
+  $cornerWidth: 18px;
+  $lineHeight: 25px;
+  $bkgColor: #ffffff;
+  
+  position: relative;
+  top: $lineHeight;
+  width: 40.8%;
+  
+  .line-with-corner__left-corner {
+    display: none;
+  }
+
+  .line-with-corner__thick-line{
+    position: relative;
+    height: $lineHeight;
+    background-color: $bkgColor;
+    width: 100%;
+  }
+
+  .line-with-corner__right-corner {
+    border-right: $cornerWidth solid transparent;
+    border-top: $lineHeight solid $bkgColor;
+  }
+}

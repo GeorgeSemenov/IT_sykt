@@ -1,0 +1,10 @@
+mixin advantage-block__pic(imgName="clock")
+    case imgName
+      when "clock"
+        img.advantage-block__pic(alt=(imgName + "-pic") src=require("../../img/our-advantages/clock.png"))&attributes(attributes)
+      when "doc"
+        img.advantage-block__pic(alt=(imgName + "-pic") src=require("../../img/our-advantages/doc.png"))&attributes(attributes)
+      when "locaion"
+        img.advantage-block__pic(alt=(imgName + "-pic") src=require("../../img/our-advantages/location.png"))&attributes(attributes)
+      when "shield"
+        img.advantage-block__pic(alt=(imgName + "-pic") src=require("../../img/our-advantages/shield.png"))&attributes(attributes)

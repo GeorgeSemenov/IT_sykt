@@ -3,5 +3,6 @@ include __thick-line/line-with-corner__thick-line.pug
 include __left-corner/line-with-corner__left-corner.pug
 mixin line-with-corner(modifier)
   .line-with-corner&attributes(attributes)
-    +line-with-corner__thick-line()
     +line-with-corner__left-corner()
+    +line-with-corner__thick-line()
+    +line-with-corner__right-corner()
