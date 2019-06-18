@@ -7128,9 +7128,6 @@ table {
     max-width: 970px;
     padding: 0; } }
 
-body {
-  overflow-x: hidden; }
-
 .header__logo-and-label {
   position: relative;
   width: 44.2%; }
@@ -7421,6 +7418,9 @@ body {
   background-size: auto 100%;
   background-position: center;
   position: relative; }
+  @media (max-width: 991.98px) {
+    .behind-the-word {
+      background-position: 30% center; } }
 
 .behind-the-word__title {
   font-family: "Open Sans";
@@ -7529,31 +7529,61 @@ body {
     border-right: 30px solid transparent;
     border-top: 40px solid #518a32; } }
 
-.line-with-corner_theme_end-of-section-white .line-with-corner__left-corner {
-  display: none; }
-
-.line-with-corner_theme_end-of-section-white .line-with-corner__thick-line {
+.line-with-corner_theme_end-of-section-white {
   position: relative;
-  left: 18px;
-  height: 25px;
-  background-color: #ffffff; }
+  top: 25px;
+  width: 40.8%; }
+  @media (max-width: 1199.98px) {
+    .line-with-corner_theme_end-of-section-white {
+      width: 30%; } }
+  @media (max-width: 991.98px) {
+    .line-with-corner_theme_end-of-section-white {
+      width: 15%; } }
+  @media (max-width: 767.98px) {
+    .line-with-corner_theme_end-of-section-white {
+      width: 7%; } }
+  @media (max-width: 575.98px) {
+    .line-with-corner_theme_end-of-section-white {
+      display: none; } }
+  .line-with-corner_theme_end-of-section-white .line-with-corner__left-corner {
+    display: none; }
+  .line-with-corner_theme_end-of-section-white .line-with-corner__thick-line {
+    position: relative;
+    height: 26px;
+    background-color: #ffffff;
+    width: 100%; }
+  .line-with-corner_theme_end-of-section-white .line-with-corner__right-corner {
+    border-right: 18px solid transparent;
+    border-top: 26px solid #ffffff; }
 
-.line-with-corner_theme_end-of-section-white .line-with-corner__right-corner {
-  border-right: 18px solid transparent;
-  border-top: 25px solid #ffffff; }
-
-.line-with-corner_theme_end-of-section-vinous .line-with-corner__left-corner {
-  display: none; }
-
-.line-with-corner_theme_end-of-section-vinous .line-with-corner__thick-line {
+.line-with-corner_theme_end-of-section-vinous {
   position: relative;
-  height: 25px;
-  background-color: #663333;
-  width: 100%; }
-
-.line-with-corner_theme_end-of-section-vinous .line-with-corner__right-corner {
-  border-right: 18px solid transparent;
-  border-top: 25px solid #663333; }
+  width: 60.2%;
+  bottom: 1px; }
+  @media (max-width: 1199.98px) {
+    .line-with-corner_theme_end-of-section-vinous {
+      width: 30%; } }
+  @media (max-width: 991.98px) {
+    .line-with-corner_theme_end-of-section-vinous {
+      width: 15%; } }
+  @media (max-width: 767.98px) {
+    .line-with-corner_theme_end-of-section-vinous {
+      width: 7%; } }
+  @media (max-width: 575.98px) {
+    .line-with-corner_theme_end-of-section-vinous {
+      display: none; } }
+  .line-with-corner_theme_end-of-section-vinous .line-with-corner__left-corner {
+    display: none; }
+  .line-with-corner_theme_end-of-section-vinous .line-with-corner__thick-line {
+    position: relative;
+    height: 26px;
+    background-color: #663333;
+    width: 100%; }
+  .line-with-corner_theme_end-of-section-vinous .line-with-corner__right-corner {
+    border-right: 18px solid transparent;
+    border-top: 26px solid #663333;
+    position: relative;
+    right: 1px; }
 
 .service-block__title {
   font-family: "open sans";
@@ -7592,10 +7622,39 @@ body {
       margin-bottom: 25px; } }
 
 .our-advantages__section-title {
-  margin-left: 14px; }
+  margin-left: 13px;
+  padding-top: 84px; }
+  @media (max-width: 991.98px) {
+    .our-advantages__section-title {
+      padding-top: 35px; } }
+
+.our-advantages__row-of-advantage-blocks {
+  margin-top: 51px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
 
 .our-advantages__advantage-block {
-  width: 220px; }
+  width: 220px;
+  margin-bottom: 15px; }
+
+.advantage-block__title {
+  margin-top: 25px;
+  font-family: "open sans";
+  color: #fff;
+  font-weight: 700; }
+
+.advantage-block__text {
+  color: #fff;
+  margin-top: 15px;
+  font-family: "open sans";
+  width: 170px;
+  font-size: 13px;
+  line-height: 22px; }
+
+.advantage-block_long-text-field .advantage-block__text {
+  width: 100%; }
 
 .our-advantages_bkg_vinous {
   background-color: #663333; }
@@ -7837,7 +7896,7 @@ body {
 
 .our-services {
   margin-top: 70px;
-  margin-bottom: 83px;
+  padding-bottom: 58px;
   padding-left: 13px;
   padding-right: 15px;
   position: relative; }
@@ -7847,8 +7906,8 @@ body {
       padding-bottom: 25px; } }
 
 .our-advantages {
-  margin-top: 110px; }
+  padding-bottom: 47px; }
   @media (max-width: 991.98px) {
     .our-advantages {
-      margin-top: 40px; } }
+      padding-bottom: 15px; } }
 

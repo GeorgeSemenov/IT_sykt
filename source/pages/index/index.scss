@@ -41,7 +41,8 @@ body{
 }
 
 .our-advantages{
-
+  padding-bottom: 47px;
   @include media-breakpoint-down(md){
+    padding-bottom: 15px;
   }
 }

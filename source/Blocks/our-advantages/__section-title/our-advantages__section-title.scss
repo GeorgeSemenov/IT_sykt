@@ -1,4 +1,7 @@
 .our-advantages__section-title {
   margin-left: 13px;
   padding-top: 84px;
+  @include media-breakpoint-down(md){
+    padding-top: 35px;
+  }
 }

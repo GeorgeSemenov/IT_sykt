@@ -1,1 +1,7 @@
-.our-advantages__row-of-advantage-blocks {}
+.our-advantages__row-of-advantage-blocks {
+  margin-top: 51px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

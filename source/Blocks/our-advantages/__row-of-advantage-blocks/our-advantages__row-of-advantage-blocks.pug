@@ -2,4 +2,7 @@ include ../../advantage-block/advantage-block.pug
 
 mixin our-advantages__row-of-advantage-blocks(modifier)
   .our-advantages__row-of-advantage-blocks&attributes(attributes)
-    +advantage-block("clock", "Соблюдаем&nbsp;сроки", "Своевременно подаём авто и доставляем грузы")
+    +advantage-block("clock", "Соблюдаем&nbsp;сроки", "Своевременно подаём авто и доставляем грузы")(class=" our-advantages__advantage-block ")
+    +advantage-block("location", "Ездим&nbsp;по&nbsp;всей&nbsp;РФ", "Всегда есть свободный транспорт")(class=" our-advantages__advantage-block ")
+    +advantage-block("shield","Безопасность", "Предлагаем только проверенных водителей, с хорошей<br/>репутацией")(class=" our-advantages__advantage-block advantage-block_long-text-field ")
+    +advantage-block("doc","Бухгалтерская&nbsp;отчётность", "Работаем за наличный и безналичный расчёт, НДС. Предоставим весь пакет документов")(class=" our-advantages__advantage-block ")

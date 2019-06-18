@@ -1,7 +1,15 @@
 .line-with-corner_theme_end-of-section-vinous {
   $cornerWidth: 18px;
-  $lineHeight: 25px;
+  $lineHeight: 26px;
   $bkgColor: #663333;
+
+  position: relative;
+  width: 60.2%;
+  bottom: 1px;
+  @include media-breakpoint-down(lg){width: 30%;}
+  @include media-breakpoint-down(md){width: 15%;}
+  @include media-breakpoint-down(sm){width: 7%;}
+  @include media-breakpoint-down(xs){display: none;}
   
   .line-with-corner__left-corner {
     display: none;
@@ -19,5 +27,7 @@
   .line-with-corner__right-corner {
     border-right: $cornerWidth solid transparent;
     border-top: $lineHeight solid $bkgColor;
+    position: relative;
+    right: 1px;
   }
 }

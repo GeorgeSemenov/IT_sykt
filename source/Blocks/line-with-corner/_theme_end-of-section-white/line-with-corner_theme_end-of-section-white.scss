@@ -1,11 +1,18 @@
 .line-with-corner_theme_end-of-section-white {
   $cornerWidth: 18px;
-  $lineHeight: 25px;
+  $lineHeight: 26px;
   $bkgColor: #ffffff;
   
   position: relative;
-  top: $lineHeight;
+  top: $lineHeight - 1px;//Если не вычесть пиксель и 
+  //величину lineHeight не увеличить на 1 px то в 
+  //chrome будет зазор в один пиксель в линии,
+  // будет не красиво.
   width: 40.8%;
+  @include media-breakpoint-down(lg){width: 30%;}
+  @include media-breakpoint-down(md){width: 15%;}
+  @include media-breakpoint-down(sm){width: 7%;}
+  @include media-breakpoint-down(xs){display: none;}
   
   .line-with-corner__left-corner {
     display: none;

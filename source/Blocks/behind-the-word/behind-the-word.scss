@@ -4,6 +4,10 @@
   background-size: auto 100%;
   background-position: center;
   position: relative;
+
+  @include media-breakpoint-down(md){
+    background-position: 30% center;
+  }
 }
 @import '__title/behind-the-word__title';
 @import '__line-with-corner/behind-the-word__line-with-corner';
