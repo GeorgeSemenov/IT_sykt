@@ -1,2 +1,7 @@
+include __row-of-description/car-park__row-of-description.pug
+include ../section-title/section-title.pug
 mixin car-park(modifier)
-  .car-park&attributes(attributes)
+  section.car-park&attributes(attributes)
+    .container
+      +section-title("НАШ&nbsp;АВТОПАРК")(class="car-park__section-title")
+      +car-park__row-of-description()

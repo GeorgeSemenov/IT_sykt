@@ -1,0 +1,13 @@
+.line-with-corner__text {
+  font-family: "open sans";
+  position: relative;
+  font-size: 13px;
+  left: 19px;
+  color: #fffefe;
+  top: 4px;
+
+  @include media-breakpoint-down(md){
+    top: 3px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,7 @@
+include ../../car-description/car-description.pug
+mixin car-park__row-of-description(modifier)
+  .car-park__row-of-description&attributes(attributes)
+    +car-description("4-pallete","1.5&nbsp;тонны","Газель&nbsp;3м,&nbsp;1,5тн,&nbsp;12м3")(class=" car-park__car-description ")
+    +car-description("6-pallete","3&nbsp;тонны","Грузовик&nbsp;3,5м,&nbsp;3,5тн,&nbsp;15м3")(class=" car-park__car-description ")
+    +car-description("15-pallete","10&nbsp;тонн","Грузовик,&nbsp;6м,&nbsp;10тн,&nbsp;34м3")(class=" car-park__car-description ")
+    +car-description("33-pallete","20&nbsp;тонн","Евро&nbsp;13,6м,&nbsp;20тн,&nbsp;86м3")(class=" car-park__car-description ")

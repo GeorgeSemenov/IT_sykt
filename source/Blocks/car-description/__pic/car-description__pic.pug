@@ -1,0 +1,11 @@
+mixin car-description__pic(imgName)
+  .car-description__pic&attributes(attributes)
+  case imgName
+      when "4-pallete"
+        img.car-description__pic(alt=(imgName + "-pic") src=require("../../img/car-park/4-pallete.png"))&attributes(attributes)
+      when "6-pallete"
+        img.car-description__pic(alt=(imgName + "-pic") src=require("../../img/car-park/6-pallete.png"))&attributes(attributes)
+      when "15-pallete"
+        img.car-description__pic(alt=(imgName + "-pic") src=require("../../img/car-park/15-pallete.png"))&attributes(attributes)
+      when "33-pallete"
+        img.car-description__pic(alt=(imgName + "-pic") src=require("../../img/car-park/33-pallete.png"))&attributes(attributes)

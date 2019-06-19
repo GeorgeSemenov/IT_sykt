@@ -1,2 +1,4 @@
-mixin line-with-corner__thick-line(modifier)
+include ../__text/line-with-corner__text.pug
+mixin line-with-corner__thick-line(text="")
   .line-with-corner__thick-line&attributes(attributes)
+    +line-with-corner__text(text)

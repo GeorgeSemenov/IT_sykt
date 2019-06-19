@@ -1,0 +1,10 @@
+.car-description__des-wrapper {
+  position: relative;
+  display: flex;
+  width: 358px;
+  height: 25px;
+
+  @include media-breakpoint-down(md){
+    width: 280px;
+  }
+}

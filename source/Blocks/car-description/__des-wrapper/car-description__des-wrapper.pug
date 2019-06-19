@@ -1,0 +1,5 @@
+include ../../line-with-corner/line-with-corner.pug
+mixin car-description__des-wrapper(descWeight, descType)
+  .car-description__des-wrapper&attributes(attributes)
+    +line-with-corner(descType)(class="car-description__desc-type line-with-corner_theme_left-down-right-up-vinous-static")
+    +line-with-corner(descWeight)(class="car-description__desc-weight line-with-corner_theme_right-up-red-static")

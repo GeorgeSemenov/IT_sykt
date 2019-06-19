@@ -1,0 +1,8 @@
+.car-park__car-description {
+  padding-bottom: 48px;
+
+  @include media-breakpoint-down(md){
+    width: 280px;
+  }
+}
+@import "../../car-description/car-description";

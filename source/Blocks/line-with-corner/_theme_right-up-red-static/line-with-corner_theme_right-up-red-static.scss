@@ -1,9 +1,9 @@
-.line-with-corner_theme_right-up-green-static {
-  
+.line-with-corner_theme_right-up-red-static {
   $cornerWidth: 18px;
   $lineHeight: 25px;
-  $bkgColor: #518a32;
-  $lineWidth: 192px;
+  $bkgColor: #d12c2c;
+  $lineWidth: 101px;
+  $lineWidthMD: 75px;
   
   .line-with-corner__left-corner {
     display: none;
@@ -14,6 +14,10 @@
     width: $lineWidth;
     background-color: $bkgColor;
     display: inline-block;
+
+    @include media-breakpoint-down(md){
+      width: $lineWidthMD;
+    }
   }
 
   .line-with-corner__right-corner {

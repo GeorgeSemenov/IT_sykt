@@ -1,0 +1,6 @@
+include __des-wrapper/car-description__des-wrapper.pug
+include __pic/car-description__pic.pug
+mixin car-description(imgName, descWeight, descType)
+  .car-description&attributes(attributes)
+    +car-description__des-wrapper(descWeight, descType)
+    +car-description__pic(imgName)

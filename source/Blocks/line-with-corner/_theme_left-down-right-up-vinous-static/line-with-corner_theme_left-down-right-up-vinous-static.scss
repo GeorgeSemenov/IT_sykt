@@ -1,12 +1,19 @@
-.line-with-corner_theme_right-up-green-static {
-  
+.line-with-corner_theme_left-down-right-up-vinous-static {
   $cornerWidth: 18px;
   $lineHeight: 25px;
-  $bkgColor: #518a32;
-  $lineWidth: 192px;
+  $bkgColor: #663333;
+  $lineWidth: 233px;
   
   .line-with-corner__left-corner {
-    display: none;
+    position: relative;
+    left: 1px;
+    border-left: $cornerWidth solid transparent;
+    border-bottom: $lineHeight solid $bkgColor;
+  }
+
+  .line-with-corner__text{
+    left: 30px;
+    @include media-breakpoint-down(md){left: 70px;}
   }
 
   .line-with-corner__thick-line{
