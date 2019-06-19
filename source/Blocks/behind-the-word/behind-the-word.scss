@@ -3,6 +3,7 @@
   background-image: url("../../img/behind-the-word/mad-driver.png");
   background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 
   @include media-breakpoint-down(md){

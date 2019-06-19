@@ -1,0 +1,20 @@
+.transportation-step__title {
+  padding-top: 26px;
+  font-size: 16px;
+  font-family: "open sans";
+  font-weight: 700;
+  color: #505050;
+
+  @include media-breakpoint-down(md){
+    padding-top: 10px;  
+  }
+
+  a{
+    $clr: #518a32;
+    cursor: pointer;
+    color: $clr;
+
+    display: inline-block;
+    border-bottom: 2px solid rgba(166, 187, 157, 0.7)
+  }
+}

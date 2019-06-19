@@ -3,9 +3,9 @@
   $lineHeight: 26px;
   $bkgColor: #663333;
 
-  position: relative;
+  position: absolute;
   width: 60.2%;
-  bottom: 1px;
+  margin-top: -1px;
   @include media-breakpoint-down(lg){width: 30%;}
   @include media-breakpoint-down(md){width: 15%;}
   @include media-breakpoint-down(sm){width: 7%;}

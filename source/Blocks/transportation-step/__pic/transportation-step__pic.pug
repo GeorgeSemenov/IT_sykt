@@ -1,0 +1,11 @@
+mixin transportation-step__pic(imgName="request")
+  .transportation-step__pic&attributes(attributes)
+    case imgName
+        when "request"
+          img(alt=(imgName + "-pic") src=require("../../img/transport-organization/request.png"))
+        when "dogovor"
+          img(alt=(imgName + "-pic") src=require("../../img/transport-organization/dogovor.png"))
+        when "truck"
+          img(alt=(imgName + "-pic") src=require("../../img/transport-organization/truck.png"))
+        when "box"
+          img(alt=(imgName + "-pic") src=require("../../img/transport-organization/box.png"))

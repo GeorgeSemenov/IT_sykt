@@ -1,0 +1,10 @@
+.transportation-step__description {
+  font-family: "open sans";
+  font-size: 13px;
+  padding-top: 17px;
+  line-height: 22px;
+
+  @include media-breakpoint-down(md){
+    padding-top: 7px;
+  }
+}

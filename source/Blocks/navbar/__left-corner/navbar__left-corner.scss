@@ -1,6 +1,8 @@
 .navbar__left-corner {
   border-bottom: $navbar-height solid $bkgrnd-clr;
   border-left: $left-corner-width solid transparent;
+  position: relative;
+  left: 1px;
   display: none;
 
   @include media-breakpoint-up(sm){

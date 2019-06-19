@@ -8,6 +8,8 @@
 @import "../../Blocks/behind-the-word/behind-the-word";
 @import "../../Blocks/our-services/our-services";
 @import "../../Blocks/our-advantages/our-advantages";
+@import "../../Blocks/transport-organization/transport-organization";
+@import "../../Blocks/car-park/car-park";
 
 // Шрифты
 @import "../../fonts/FuturaPT/stylesheet";
@@ -44,5 +46,14 @@ body{
   padding-bottom: 47px;
   @include media-breakpoint-down(md){
     padding-bottom: 15px;
+  }
+}
+
+.transport-organization{
+  padding-top: 110px;
+  padding-bottom: 114px;
+  @include media-breakpoint-down(md){
+    padding-top: 40px;
+    padding-bottom: 25px;
   }
 }

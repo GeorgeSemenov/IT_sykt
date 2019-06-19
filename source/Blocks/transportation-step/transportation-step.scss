@@ -1,0 +1,10 @@
+.transportation-step {
+  display: flex;
+}
+@import '__content-wrapper/transportation-step__content-wrapper';
+@import '__arrow-field/transportation-step__arrow-field';
+@import '__arrow/transportation-step__arrow';
+@import '__pic/transportation-step__pic';
+@import '__title/transportation-step__title';
+@import '__description/transportation-step__description';
+@import '_theme_without-arrow/transportation-step_theme_without-arrow';

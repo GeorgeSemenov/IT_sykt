@@ -1,0 +1,7 @@
+include __row-of-transportation-steps/transport-organization__row-of-transportation-steps.pug
+include ../section-title/section-title.pug
+mixin transport-organization(modifier)
+  section.transport-organization&attributes(attributes)
+    .container
+      +section-title("КАК&nbsp;ОРГАНИЗУЕМ&nbsp;ПЕРЕВОЗКУ")(class=" transport-organization__section-title ")
+      +transport-organization__row-of-transportation-steps()

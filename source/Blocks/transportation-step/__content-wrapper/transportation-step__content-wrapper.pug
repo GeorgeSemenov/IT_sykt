@@ -1,0 +1,8 @@
+include ../__description/transportation-step__description.pug
+include ../__title/transportation-step__title.pug
+include ../__pic/transportation-step__pic.pug
+mixin transportation-step__content-wrapper(imgName, description, title, titleAnchor)
+  .transportation-step__content-wrapper&attributes(attributes)
+    +transportation-step__pic(imgName)
+    +transportation-step__title(title, titleAnchor)
+    +transportation-step__description(description)

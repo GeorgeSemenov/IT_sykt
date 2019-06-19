@@ -1,0 +1,18 @@
+.transport-organization__row-of-transportation-steps {
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(lg){
+    justify-content: space-around;
+  }
+
+  @include media-breakpoint-down(md){
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

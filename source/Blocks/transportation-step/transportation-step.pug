@@ -1,0 +1,6 @@
+include __arrow-field/transportation-step__arrow-field.pug
+include __content-wrapper/transportation-step__content-wrapper.pug
+mixin transportation-step(imgName,description,title, titleAnchor)
+  .transportation-step&attributes(attributes)
+    +transportation-step__content-wrapper(imgName,description,title, titleAnchor)
+    +transportation-step__arrow-field()

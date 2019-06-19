@@ -1,0 +1,15 @@
+.transportation-step__pic {
+  height: 60px;
+  position: relative;
+
+  img{
+    position: absolute;
+    bottom:0;
+    left: 40%;
+
+    @include media-breakpoint-down(lg){
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

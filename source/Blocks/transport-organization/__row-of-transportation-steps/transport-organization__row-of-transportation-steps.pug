@@ -1,0 +1,7 @@
+include ../../transportation-step/transportation-step.pug
+mixin transport-organization__row-of-transportation-steps(modifier)
+  .transport-organization__row-of-transportation-steps&attributes(attributes)
+    +transportation-step("request", "Даете параметры груза", "Оставляете&nbsp;", "заявку")(class=" transport-organization__transportation-step ")
+    +transportation-step("dogovor", "Согласовываем цену", "Заключаем&nbsp;договор")(class=" transport-organization__transportation-step ")
+    +transportation-step("truck", "Подаём транспорт в назначенное время, загружаемся, делаете предоплату, доставляем груз", "Осуществляем&nbsp;перевозку")(class=" transport-organization__transportation-step ")
+    +transportation-step("box", "Окончательный расчёт", "Прием&nbsp;и&nbsp;разгрузка")(class=" transportation-step_theme_without-arrow transport-organization__transportation-step ")

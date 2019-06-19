@@ -1,0 +1,7 @@
+.transportation-step__arrow-field {
+  width: 20px;
+
+  @include media-breakpoint-down(lg){
+    display: none;
+  }
+}
