@@ -1,0 +1,19 @@
+.footer {
+  background-color: #1c1c1c;
+  font-family: "open sans";
+  font-size: 13px;
+
+  @include media-breakpoint-down(xs){font-size: 11px;}
+}
+@import '__place-and-work-time/footer__place-and-work-time';
+@import '__contacts/footer__contacts';
+@import '__feedback-button-wrapper/footer__feedback-button-wrapper';
+@import '__place/footer__place';
+@import '__work-time/footer__work-time';
+@import '__phone/footer__phone';
+@import '__email/footer__email';
+@import '__feedback-button/footer__feedback-button';
+@import '__underground/footer__underground';
+@import '__author-rights/footer__author-rights';
+@import '__developers/footer__developers';
+@import '__aboveground/footer__aboveground';

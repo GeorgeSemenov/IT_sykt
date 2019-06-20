@@ -1,0 +1,6 @@
+include ../__place/footer__place.pug
+include ../__work-time/footer__work-time.pug
+mixin footer__place-and-work-time(modifier)
+  .footer__place-and-work-time&attributes(attributes)
+    +footer__place()
+    +footer__work-time()

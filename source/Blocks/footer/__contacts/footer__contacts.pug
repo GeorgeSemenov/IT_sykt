@@ -1,0 +1,6 @@
+include ../__email/footer__email.pug
+include ../__phone/footer__phone.pug
+mixin footer__contacts(modifier)
+  .footer__contacts&attributes(attributes)
+    +footer__phone()
+    +footer__email()

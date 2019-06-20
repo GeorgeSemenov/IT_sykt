@@ -1,0 +1,12 @@
+.footer__developers {
+  position: relative;
+  bottom: 11px;
+
+  @include media-breakpoint-down(md){
+    bottom: 0px;
+  }
+
+  span{
+    text-decoration: underline;
+  }
+}

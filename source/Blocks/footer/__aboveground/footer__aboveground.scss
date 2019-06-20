@@ -1,0 +1,15 @@
+.footer__aboveground {
+  height: 120px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(lg){
+    justify-content: space-around;
+  }
+  @include media-breakpoint-down(xs){
+    height: 160px;
+  }
+}

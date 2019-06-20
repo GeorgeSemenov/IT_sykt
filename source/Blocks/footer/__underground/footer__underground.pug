@@ -1,0 +1,6 @@
+include ../__developers/footer__developers.pug
+include ../__author-rights/footer__author-rights.pug
+mixin footer__underground(modifier)
+  .footer__underground&attributes(attributes)
+    +footer__author-rights()
+    +footer__developers()

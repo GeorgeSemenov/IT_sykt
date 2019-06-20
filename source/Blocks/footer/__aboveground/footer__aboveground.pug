@@ -1,0 +1,8 @@
+include ../__place-and-work-time/footer__place-and-work-time.pug
+include ../__contacts/footer__contacts
+include ../__feedback-button-wrapper/footer__feedback-button-wrapper.pug
+mixin footer__aboveground(modifier)
+  .footer__aboveground&attributes(attributes)
+    +footer__place-and-work-time()
+    +footer__contacts()
+    +footer__feedback-button-wrapper()

@@ -1,0 +1,7 @@
+include __aboveground/footer__aboveground.pug
+include __underground/footer__underground.pug
+mixin footer(modifier)
+  footer.footer&attributes(attributes)
+    .container
+      +footer__aboveground()
+      +footer__underground()

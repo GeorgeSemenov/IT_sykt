@@ -1,0 +1,8 @@
+.footer__author-rights {
+  position: relative;
+  bottom: 11px;
+
+  @include media-breakpoint-down(md){
+    bottom: 0px;
+  }
+}
