@@ -7,6 +7,10 @@ $logo-and-label-height: 130px;
   position: relative;
   width: 44.2%;
 
+  @include media-breakpoint-down(lg){
+    width: 40%;
+  }
+
   @include media-breakpoint-down(sm){
     top: 7px;
   }

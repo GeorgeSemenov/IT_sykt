@@ -5,6 +5,10 @@ $feedback-button-width: 150px;
 .header__contacts {
   position: absolute;
   left: 43.8%;
+
+  @include media-breakpoint-down(lg){
+    left: 39.8%;
+  }
 }
 
 @import '../../contacts/contacts';

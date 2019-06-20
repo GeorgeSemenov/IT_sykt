@@ -1,6 +1,5 @@
 body{
    width: 100vw;
-   overflow-y: overlay;
 }
 img[alt="www.000webhost.com"]{display: none;}
 html, body, div, span, applet, object, iframe,
@@ -46,3 +45,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+//Отключить скроллбар и оставить возможность скроллинка
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+body { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+body { overflow: -moz-scrollbars-none; }

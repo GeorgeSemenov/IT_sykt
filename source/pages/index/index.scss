@@ -10,6 +10,7 @@
 @import "../../Blocks/our-advantages/our-advantages";
 @import "../../Blocks/transport-organization/transport-organization";
 @import "../../Blocks/car-park/car-park";
+@import "../../Blocks/footer/footer";
 
 // Шрифты
 @import "../../fonts/FuturaPT/stylesheet";
@@ -60,4 +61,20 @@ body{
 
 .car-park{
   padding-top: 85px;
+  padding-bottom: 39px;
+
+
+  @include media-breakpoint-down(md){
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+}
+
+.footer{
+  .container{
+    @include media-breakpoint-up(lg){
+      max-width: 940px;
+    }
+  }
 }
