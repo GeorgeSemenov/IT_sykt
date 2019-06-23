@@ -1,0 +1,8 @@
+.bread-crumps {
+  font-family: "open sans";
+
+  a{text-decoration: none;}
+}
+@import '__main/bread-crumps__main';
+@import '__divider/bread-crumps__divider';
+@import '__current-page/bread-crumps__current-page';

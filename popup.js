@@ -1,0 +1,11 @@
+$(document).ready(function(){
+  $(".feedback-button").click(function(){
+    $("body").css({"overflow":"hidden"});
+    $("#feedback-form").fadeIn();
+    $("#feedback-form").css({"top":($(window).scrollTop()+"px")});
+  })
+  $(".form__form-wrapper").click(function(){
+    $("#feedback-form").fadeOut();
+    $("body").css({"overflow":"auto"});
+  })
+})

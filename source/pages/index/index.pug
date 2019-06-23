@@ -6,18 +6,25 @@ include ../../Blocks/transport-organization/transport-organization.pug
 include ../../Blocks/car-park/car-park.pug
 include ../../Blocks/footer/footer.pug
 doctype html
+include ../../Blocks/form/form.pug
 html
   head
   meta(charset = "utf-8")
   meta(name="viewport", content="initial-scale=1.0, width=device-width")
   title pereezd_1920
   body
-    +header()
-    +behind-the-word()
-    +our-services()()
-    +line-with-corner()(class=" line-with-corner_theme_end-of-section-white") 
-    +our-advantages()
-    +line-with-corner()(class=" line-with-corner_theme_end-of-section-vinous") 
-    +transport-organization()
-    +car-park()
-    +footer()
+    .wrapper
+      .content
+        +header()
+        +behind-the-word()
+        +our-services()()
+        +line-with-corner()(class=" line-with-corner_theme_end-of-section-white") 
+        +our-advantages()
+        +line-with-corner()(class=" line-with-corner_theme_end-of-section-vinous") 
+        +transport-organization()
+        +car-park()
+      +footer()
+      +form( "Форма&nbsp;обратной&nbsp;связи",
+            "Ваше имя","request_name","text",
+            "Телефон","request_tel","tel",
+            false)(class=" form_theme_feedback ", id="feedback-form")

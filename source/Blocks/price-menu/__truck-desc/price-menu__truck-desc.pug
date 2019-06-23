@@ -1,0 +1,6 @@
+include ../__truck-property-column/price-menu__truck-property-column.pug
+include ../__truck-marks/price-menu__truck-marks.pug
+mixin price-menu__truck-desc(marksColumnObj, propertysObj)
+  .price-menu__truck-desc&attributes(attributes)
+    +price-menu__truck-marks(marksColumnObj)
+    +price-menu__truck-property-column(propertysObj)

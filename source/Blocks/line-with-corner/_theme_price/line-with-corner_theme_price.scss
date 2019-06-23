@@ -1,0 +1,39 @@
+.line-with-corner_theme_price {
+  $cornerWidth: 30px;
+  $lineHeight: 40px;
+  $bkgColor: #663333;
+  $lineWidth: 110px;
+  
+  .line-with-corner__left-corner {
+    display: none;
+  }
+
+  .line-with-corner__text{
+    left: 19px;
+    top: 11px;
+    @include media-breakpoint-down(lg){
+      font-size: 13px;
+      left: 0;
+      display: block;
+      text-align: center;
+    }
+    @include media-breakpoint-down(xs){
+      top: 11px;
+    }
+  }
+
+  .line-with-corner__thick-line{
+    height: $lineHeight;
+    width: $lineWidth;
+    background-color: $bkgColor;
+    display: inline-block;
+
+  }
+
+  .line-with-corner__right-corner {
+    position: relative;
+    right: 1px;
+    border-right: $cornerWidth solid transparent;
+    border-top: $lineHeight solid $bkgColor;
+  }
+}

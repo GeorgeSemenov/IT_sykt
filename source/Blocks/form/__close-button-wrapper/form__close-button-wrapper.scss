@@ -1,0 +1,23 @@
+.form__close-button-wrapper {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  justify-content: space-between;
+
+  width: 80px;
+  font-size: 13px;
+  font-family: "open sans";
+
+  &:hover{
+	.form__close-button{
+	  background-color: transparent;
+	  
+	  svg{
+	    stroke: #663333;
+	    stroke-width: 2px;
+	  }
+	}
+  }
+}

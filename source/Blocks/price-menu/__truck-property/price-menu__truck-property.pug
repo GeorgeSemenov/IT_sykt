@@ -1,0 +1,6 @@
+include ../__truck-property-value/price-menu__truck-property-value.pug
+include ../__truck-property-name/price-menu__truck-property-name.pug
+mixin price-menu__truck-property(propertyObj)
+  .price-menu__truck-property&attributes(attributes)
+    +price-menu__truck-property-name(propertyObj.name)
+    +price-menu__truck-property-value(propertyObj.value)

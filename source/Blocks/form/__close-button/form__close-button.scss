@@ -1,0 +1,20 @@
+.form__close-button {
+  cursor: pointer;
+  position: relative;
+  width:16px;
+  height:16px;
+  background-color: #663333;
+  border-radius: 50%;
+
+  svg{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    stroke-width: 1px;
+    stroke: #fff;
+  }
+
+
+}

@@ -1,0 +1,16 @@
+.price-menu__item-container {
+  display: none;
+  color: #505050;
+
+
+  @include media-breakpoint-up(lg){
+    position: absolute;
+    height: 612px;
+    left: 0;
+    right: 0;
+
+    top: 136px
+    
+  }
+}
+@import '_active/price-menu__item-container_active';

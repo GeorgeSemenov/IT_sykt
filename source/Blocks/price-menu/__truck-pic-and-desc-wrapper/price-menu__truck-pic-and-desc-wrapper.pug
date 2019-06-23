@@ -1,0 +1,6 @@
+include ../__truck-desc-wrapper/price-menu__truck-desc-wrapper.pug
+include ../__pic-wrapper/price-menu__pic-wrapper.pug
+mixin price-menu__truck-pic-and-desc-wrapper(imgName, marksColumnObj, propertysObj)
+  .price-menu__truck-pic-and-desc-wrapper&attributes(attributes)
+    +price-menu__pic-wrapper(imgName)
+    +price-menu__truck-desc-wrapper(marksColumnObj, propertysObj)

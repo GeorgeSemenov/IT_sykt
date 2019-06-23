@@ -1,0 +1,7 @@
+include ../__tuck-mark/price-menu__tuck-mark.pug
+include ../__truck-marks-title/price-menu__truck-marks-title.pug
+mixin price-menu__truck-marks(marksColumnObj={marksColumnTitle:"Marks column title", marksColumnItemSymbol:"-", marks:['one mark', 'two mark']})
+  .price-menu__truck-marks&attributes(attributes)
+    +price-menu__truck-marks-title(marksColumnObj.marksColumnTitle)
+    each mark in marksColumnObj.marks
+      +price-menu__tuck-mark(marksColumnObj.marksColumnItemSymbol, mark)

@@ -1,0 +1,30 @@
+include ../../Blocks/header/header.pug
+include ../../Blocks/section-title/section-title.pug
+include ../../Blocks/footer/footer.pug
+doctype html
+include ../../Blocks/bread-crumps/bread-crumps.pug
+include ../../Blocks/section-title/section-title.pug
+include ../../Blocks/price-menu/price-menu.pug
+include ../../Blocks/form/form.pug
+html
+  head
+  meta(charset = "utf-8")
+  meta(name="viewport", content="initial-scale=1.0, width=device-width")
+  title price
+  body
+    .wrapper
+      .content
+        +header()
+        .container
+          +bread-crumps()
+          +section-title("ПРАЙС")
+          +price-menu()
+      +footer()
+      +form( "Форма&nbsp;обратной&nbsp;связи",
+            "Ваше имя","feedback_name","text",
+            "Телефон","feedback_tel","tel",
+            false)(class=" form_theme_feedback ", id="feedback-form")
+      +form("Оставить&nbsp;заявку",
+            "Ваше имя", "request_name", "text",
+            "Телефон", "request_tel", "tel",
+            true )(class="form_theme_request", id="request-form")

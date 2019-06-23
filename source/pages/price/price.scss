@@ -1,0 +1,58 @@
+// Дополнительные материалы
+@import "~bootstrap/scss/bootstrap";
+@import "../../components/UnCss";
+@import "../../components/extend";
+
+// Блоки
+@import "../../Blocks/header/header";
+@import "../../Blocks/section-title/section-title";
+@import "../../Blocks/bread-crumps/bread-crumps";
+@import "../../Blocks/price-menu/price-menu";
+@import "../../Blocks/footer/footer";
+@import "../../Blocks/form/form";
+
+// Шрифты
+@import "../../fonts/FuturaPT/stylesheet";
+@import "../../fonts/OpenSans/stylesheet";
+@import "../../fonts/Museo_Cyrl_300/fonts";
+
+body{
+  background-color: #fff;
+}
+
+.header{
+  //эта строка (position: relative) нужна, чтобы в хроме 
+  //правильно высчитывался в Процентах left
+  position: relative;
+  height: 170px;
+
+  @include media-breakpoint-down(xs){
+    height: auto;
+  }
+}
+
+.bread-crumps{
+  padding-top: 27px;
+  font-size: 13px;
+  padding-left: 14px;
+}
+
+.section-title{
+  padding-top: 43px;
+  padding-left: 13px;
+}
+
+.price-menu{
+  padding-top: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 621px;
+}
+
+.footer{
+  .container{
+    @include media-breakpoint-up(lg){
+      max-width: 940px;
+    }
+  }
+}

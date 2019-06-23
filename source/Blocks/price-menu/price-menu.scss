@@ -1,0 +1,25 @@
+.price-menu {
+    position: relative;
+    @include media-breakpoint-up(lg){
+      display: flex;
+    }
+}
+@import '__item/price-menu__item';
+@import '__line-with-corner/price-menu__line-with-corner';
+@import '__item-container/price-menu__item-container';
+@import '__trade-offer/price-menu__trade-offer';
+@import '__truck-pic-and-desc-wrapper/price-menu__truck-pic-and-desc-wrapper';
+@import '__pic-wrapper/price-menu__pic-wrapper';
+@import '__truck-desc-wrapper/price-menu__truck-desc-wrapper';
+@import '__pic/price-menu__pic';
+@import '__feedback-button/price-menu__feedback-button';
+@import '__truck-desc/price-menu__truck-desc';
+@import '__truck-marks/price-menu__truck-marks';
+@import '__truck-property-column/price-menu__truck-property-column';
+@import '__truck-property/price-menu__truck-property';
+@import '__truck-marks-title/price-menu__truck-marks-title';
+@import '__tuck-mark/price-menu__tuck-mark';
+@import '__mark-symbol/price-menu__mark-symbol';
+@import '__track-mark-value/price-menu__track-mark-value';
+@import '__truck-property-name/price-menu__truck-property-name';
+@import '__truck-property-value/price-menu__truck-property-value';

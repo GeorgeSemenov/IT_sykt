@@ -1,0 +1,6 @@
+include ../__item-container/price-menu__item-container.pug
+include ../../line-with-corner/line-with-corner.pug
+mixin price-menu__item(itemName,tradeOffer,imgName, marksColumnObj, propertysObj)
+  li.price-menu__item&attributes(attributes)
+    +line-with-corner(itemName)(class=" price-menu__line-with-corner line-with-corner_theme_price")
+    +price-menu__item-container(tradeOffer,imgName, marksColumnObj, propertysObj)

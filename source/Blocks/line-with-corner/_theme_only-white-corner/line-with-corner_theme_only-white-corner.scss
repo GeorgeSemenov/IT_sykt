@@ -1,0 +1,18 @@
+.line-with-corner_theme_only-white-corner {
+  $cornerWidth: 18px;
+  $lineHeight: 25px;
+  $bkgColor: #ffffff;
+  
+  .line-with-corner__left-corner {
+    display: none;
+  }
+
+  .line-with-corner__thick-line{
+    display: none;
+  }
+
+  .line-with-corner__right-corner {
+    border-right: $cornerWidth solid transparent;
+    border-top: $lineHeight solid $bkgColor;
+  }
+}

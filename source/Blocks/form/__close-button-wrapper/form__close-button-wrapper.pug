@@ -1,0 +1,5 @@
+include ../__close-button/form__close-button.pug
+mixin form__close-button-wrapper(text="Закрыть")
+  .form__close-button-wrapper&attributes(attributes)
+    span=text
+    +form__close-button()

@@ -1,0 +1,42 @@
+.form__input-wrapper_checkbox_vinous {
+  flex-direction: row;
+  margin-top: 8px;
+
+  input{
+    display: none;
+  }
+
+  label{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    color: #663333;
+  }
+
+  label:before{
+    background-color: #e6e6e6;
+    content: "\2714";
+    border: 0.1em solid #000;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-left: 5px;
+    padding-top: 3px;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+  }
+
+  input:checked + label:before{
+    color: #663333;
+  }
+
+  span{
+    display: inline-block;
+    margin-left: 16px;
+    line-height: 16px;
+    position: relative;
+    top: 14px;
+  }
+}

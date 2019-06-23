@@ -1,0 +1,6 @@
+include ../__trade-offer/price-menu__trade-offer.pug
+include ../__truck-pic-and-desc-wrapper/price-menu__truck-pic-and-desc-wrapper.pug
+mixin price-menu__item-container(tradeOffer,imgName, marksColumnObj, propertysObj)
+  .price-menu__item-container&attributes(attributes)
+    +price-menu__trade-offer(tradeOffer)
+    +price-menu__truck-pic-and-desc-wrapper(imgName, marksColumnObj, propertysObj)

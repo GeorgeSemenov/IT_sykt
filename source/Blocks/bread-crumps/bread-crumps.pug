@@ -1,0 +1,8 @@
+include __current-page/bread-crumps__current-page.pug
+include __divider/bread-crumps__divider.pug
+include __main/bread-crumps__main.pug
+mixin bread-crumps(main_text, main_href,     divider_symbol,      current_text, current_href)
+  .bread-crumps&attributes(attributes)
+    +bread-crumps__main(main_text, main_href)
+    +bread-crumps__divider(divider_symbol)
+    +bread-crumps__current-page(current_text, current_href)

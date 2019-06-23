@@ -1,0 +1,11 @@
+.form__input-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 auto;
+  width: 242px;
+
+  & + .form__input-wrapper{
+    margin-top: 18px;
+  }
+}
+@import '_checkbox_vinous/form__input-wrapper_checkbox_vinous';

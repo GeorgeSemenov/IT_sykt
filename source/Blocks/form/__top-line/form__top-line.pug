@@ -1,0 +1,6 @@
+include ../__close-button-wrapper/form__close-button-wrapper.pug
+include ../__title/form__title.pug
+mixin form__top-line(title)
+  .form__top-line&attributes(attributes)
+    +form__title(title)
+    +form__close-button-wrapper()

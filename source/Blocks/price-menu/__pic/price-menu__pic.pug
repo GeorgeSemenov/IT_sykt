@@ -1,0 +1,10 @@
+mixin price-menu__pic(imgName)
+  case imgName
+    when "trucks1"
+      img.price-menu__pic(alt=(imgName + "-pic") src=require("../../img/Price/trucks1.png"))&attributes(attributes)
+    when "trucks2"
+      img.price-menu__pic(alt=(imgName + "-pic") src=require("../../img/Price/trucks2.png"))&attributes(attributes)
+    when "trucks3"
+      img.price-menu__pic(alt=(imgName + "-pic") src=require("../../img/Price/trucks3.png"))&attributes(attributes)
+    when "trucks4"
+      img.price-menu__pic(alt=(imgName + "-pic") src=require("../../img/Price/trucks4.png"))&attributes(attributes)

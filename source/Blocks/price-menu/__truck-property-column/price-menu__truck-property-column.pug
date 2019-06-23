@@ -1,0 +1,5 @@
+include ../__truck-property/price-menu__truck-property.pug
+mixin price-menu__truck-property-column(propertysObj=[{name:"property 1 name", value:"property 1 value"},{name:"property 2 name", value:"property 2 value"}])
+  .price-menu__truck-property-column&attributes(attributes)
+    each propertyObj in propertysObj
+      +price-menu__truck-property(propertyObj)

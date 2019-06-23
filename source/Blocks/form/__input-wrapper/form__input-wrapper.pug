@@ -1,0 +1,6 @@
+include ../__input/form__input.pug
+include ../__label/form__label.pug
+mixin form__input-wrapper(label,inputId="form input", inputType)
+  .form__input-wrapper&attributes(attributes)
+    +form__input(inputId, inputType,checked)()
+    +form__label(label, inputId)

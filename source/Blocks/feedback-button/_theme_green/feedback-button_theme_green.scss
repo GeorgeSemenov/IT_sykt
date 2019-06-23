@@ -1,0 +1,8 @@
+.feedback-button_theme_green {
+	$clr: #518a32;
+	border: 1px solid $clr;
+
+	.feedback-button__text{
+		color: $clr;
+	}
+}

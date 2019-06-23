@@ -1,0 +1,15 @@
+.price-menu__item {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+
+  &:last-child{background-color: transparent;}
+
+  @include media-breakpoint-up(lg){
+    background-color: #663333;
+  }
+}
