@@ -1,4 +1,7 @@
 .price-menu__truck-pic-and-desc-wrapper {
   margin-top: 37px;
   position: relative;
+  @include media-breakpoint-down(md){
+    margin-top: 5px;
+  }
 }

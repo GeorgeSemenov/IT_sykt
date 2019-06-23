@@ -3,9 +3,8 @@
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  cursor: pointer;
-  height: 40px;
-  width: 140px;
+  min-height: 40px;
+  min-width: 140px;
 
   &:last-child{background-color: transparent;}
 

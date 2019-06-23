@@ -1,3 +1,6 @@
 .price-menu__truck-desc {
-  display: flex;
+  @include media-breakpoint-up(lg){
+    display: flex;
+  }
+  
 }

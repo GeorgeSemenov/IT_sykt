@@ -1,3 +1,7 @@
 .price-menu__truck-property {
   margin-bottom: 28px;
+
+  @include media-breakpoint-down(md){
+    margin-bottom: 19px;
+  }
 }

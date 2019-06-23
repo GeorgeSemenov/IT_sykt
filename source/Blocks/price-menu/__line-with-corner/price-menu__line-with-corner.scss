@@ -1,5 +1,6 @@
 .price-menu__line-with-corner {
   position: absolute;
+  cursor: pointer;
 }
 @import "../../line-with-corner/line-with-corner";@import '_position_top-left/price-menu__line-with-corner_position_top-left';
 @import '_position_bottom-right/price-menu__line-with-corner_position_bottom-right';

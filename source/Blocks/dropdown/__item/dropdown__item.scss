@@ -1,3 +1,10 @@
 .dropdown__item {
   @extend .dropdown-item;
+
+  &:before{
+    color:#663333;
+    content:">";
+    position: relative;
+    right: 10px;
+  }
 }

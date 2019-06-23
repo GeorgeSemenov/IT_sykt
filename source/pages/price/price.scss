@@ -46,7 +46,9 @@ body{
   padding-top: 50px;
   margin-left: 15px;
   margin-right: 15px;
-  padding-bottom: 621px;
+  @include media-breakpoint-up(lg){
+    padding-bottom: 621px;
+  }
 }
 
 .footer{

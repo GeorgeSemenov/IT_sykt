@@ -2,4 +2,8 @@
 .price-menu__feedback-button {
   width: 150px;
   height: 40px;
+  background-color: #fff;
+  @include media-breakpoint-up(lg){
+    margin-top: 55px;
+  }
 }

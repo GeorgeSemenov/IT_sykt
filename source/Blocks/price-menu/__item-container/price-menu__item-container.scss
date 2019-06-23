@@ -12,5 +12,8 @@
     top: 136px
     
   }
+  @include media-breakpoint-down(md){
+    padding-top: 40px;
+  }
 }
 @import '_active/price-menu__item-container_active';
