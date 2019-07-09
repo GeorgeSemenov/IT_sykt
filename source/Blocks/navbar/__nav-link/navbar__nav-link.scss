@@ -1,6 +1,7 @@
 .navbar__nav-link {
   @extend .nav-link ;
 
+  outline: none !important;
   color: $color;
 
   @include media-breakpoint-up(sm){

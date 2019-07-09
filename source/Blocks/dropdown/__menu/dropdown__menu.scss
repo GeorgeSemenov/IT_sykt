@@ -3,7 +3,21 @@
   font-family: inherit;
   font-size: inherit;
 
+  padding-top: 16px;
+  padding-bottom: 26px;
+
   @include media-breakpoint-up(sm){
     top: 36px;
+    position: relative;
+
+    &:before{
+      content:"";
+      width: 33%;
+      height: 3px;
+      background-color:#d12c2c;
+      position: absolute;
+      top: -3px;
+      left: 10.4%;
+    }
   }
 }

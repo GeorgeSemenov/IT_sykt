@@ -4,4 +4,8 @@
 
   font-family: inherit;
   font-size: inherit;
+
+  @include media-breakpoint-down(xs){
+    margin-top: 3px;
+  }
 }

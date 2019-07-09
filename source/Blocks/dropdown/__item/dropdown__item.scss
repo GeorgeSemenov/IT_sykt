@@ -2,11 +2,19 @@
   @extend .dropdown-item;
   font-family: inherit;
   font-size: inherit;
+  padding-left: 43px;
+  padding-right: 29px;
+  padding-bottom: 3px;
+  position: relative;
+  bottom: 2px;
+
 
   &:before{
     color:#663333;
-    content:">";
+    content:"\203A";
+    font-size: 23px;
     position: relative;
-    right: 10px;
+    right: 14px;
+    top: 2px;
   }
 }
