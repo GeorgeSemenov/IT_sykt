@@ -1,4 +1,7 @@
 .navbar__collapse {
   background-color: $bkgrnd-clr;
   @extend .collapse;
+
+  font-family: inherit;
+  font-size: inherit;
 }

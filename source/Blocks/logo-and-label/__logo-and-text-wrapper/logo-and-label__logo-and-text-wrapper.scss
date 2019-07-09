@@ -1,22 +1,25 @@
 .logo-and-label__logo-and-text-wrapper {
-  $w: 279px;
-  $r: 81px;
-  $t: 20px;
+  $width: 279px;
+  $right: 81px;
+  $top: 20px;
+
+  @include unselectable;
+  outline: none;
   
   position: absolute;
-  width: $w;
-  right: $r;
-  top: $t;
+  width: $width;
+  right: $right;
+  top: $top;
 
   @include media-breakpoint-down(md){
-    width: $w/2;
-    right: $r/2;
-    top: $t/2;
+    width: $width/2;
+    right: $right/2;
+    top: $top/2;
   }
 
   @include media-breakpoint-down(xs){
-    width: $w/3;
-    right: $r/3;
-    top: $t/3;
+    width: $width/3;
+    right: $right/3;
+    top: $top/3;
   }
 }

@@ -1,5 +1,7 @@
 .navbar__nav {
   @extend .navbar-nav;
+  font-family: inherit;
+  font-size: inherit;
 
   background-color: $bkgrnd-clr;
 

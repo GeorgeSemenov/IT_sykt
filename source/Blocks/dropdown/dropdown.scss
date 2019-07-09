@@ -1,6 +1,8 @@
 .dropdown {
   //Расжиряем класс дропдаун у бутстрапа
   @extend .dropdown;
+  font-family: inherit;
+  font-size: inherit;
 }
 @import '__toggle/dropdown__toggle';
 @import '__menu/dropdown__menu';

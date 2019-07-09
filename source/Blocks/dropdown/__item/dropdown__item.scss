@@ -1,5 +1,7 @@
 .dropdown__item {
   @extend .dropdown-item;
+  font-family: inherit;
+  font-size: inherit;
 
   &:before{
     color:#663333;

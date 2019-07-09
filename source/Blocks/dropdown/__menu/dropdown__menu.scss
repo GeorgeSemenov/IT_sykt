@@ -1,5 +1,7 @@
 .dropdown__menu {
   @extend .dropdown-menu;
+  font-family: inherit;
+  font-size: inherit;
 
   @include media-breakpoint-up(sm){
     top: 36px;

@@ -1,6 +1,9 @@
 .dropdown__toggle {
   @extend .dropdown-toggle;
 
+  font-family: inherit;
+  font-size: inherit;
+
   &::after{
     position: relative;
     left: 6px;

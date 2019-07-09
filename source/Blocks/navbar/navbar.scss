@@ -6,7 +6,8 @@ $color: white !important;
   //Наследует бустраповыский класс .navbar
   @extend .navbar;
   color: $color;
-  
+  font-family: "Open Sans";
+  font-size: 13px;  
 }
 @import '__toggler/navbar__toggler';
 @import '__toggler-icon/navbar__toggler-icon';

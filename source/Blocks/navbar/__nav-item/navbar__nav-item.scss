@@ -1,8 +1,8 @@
 .navbar__nav-item {
   @extend .nav-item;
 
-  font-family: open_sans;
-  font-size: 15px;
+  font-family: inherit;
+  font-size: inherit;
 
   @include media-breakpoint-up(sm){
     position: relative;
