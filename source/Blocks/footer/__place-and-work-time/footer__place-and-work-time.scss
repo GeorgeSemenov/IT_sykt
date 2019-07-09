@@ -1,3 +1,7 @@
 .footer__place-and-work-time {
-
+  @include media-breakpoint-down(lg){
+    position: absolute;
+    left: 0;
+    top: 20px;
+  }
 }

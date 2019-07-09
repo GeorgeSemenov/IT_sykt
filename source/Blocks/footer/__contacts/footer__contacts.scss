@@ -3,6 +3,8 @@
   right: 40px;
 
   @include media-breakpoint-down(lg){
-    right: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
   }
 }

@@ -2,8 +2,6 @@
   background-color: #1c1c1c;
   font-family: "open sans";
   font-size: 13px;
-
-  @include media-breakpoint-down(xs){font-size: 11px;}
 }
 @import '__place-and-work-time/footer__place-and-work-time';
 @import '__contacts/footer__contacts';

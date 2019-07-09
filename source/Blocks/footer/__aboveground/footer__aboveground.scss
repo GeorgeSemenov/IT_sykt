@@ -7,9 +7,12 @@
   flex-wrap: wrap;
 
   @include media-breakpoint-down(lg){
-    justify-content: space-around;
+    position: relative;
+    justify-content: flex-end;
   }
   @include media-breakpoint-down(xs){
     height: 160px;
+    justify-content: center;
   }
+  @media(max-width: 360px) { font-size: 11px;}
 }

@@ -1,1 +1,7 @@
-.footer__feedback-button-wrapper {}
+.footer__feedback-button-wrapper {
+  @include media-breakpoint-down(lg){
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
