@@ -1,23 +1,42 @@
 .dropdown__menu {
   @extend .dropdown-menu;
+  border: none;
   font-family: inherit;
   font-size: inherit;
-
+  border-radius: 0;
   padding-top: 16px;
   padding-bottom: 26px;
+
+  @include media-breakpoint-up(sm){
+    left: -30px;
+  }
+
+  &:before{
+      content:"";
+      height: 3px;
+      background-color:#d12c2c;
+      position: absolute;
+      top: -3px;
+    }
 
   @include media-breakpoint-up(sm){
     top: 36px;
     position: relative;
 
     &:before{
-      content:"";
       width: 33%;
-      height: 3px;
-      background-color:#d12c2c;
-      position: absolute;
-      top: -3px;
       left: 10.4%;
+    }
+  }
+
+  @include media-breakpoint-down(xs){    
+    width: 100%;  
+    top: 0;
+
+    &.show{position: relative;}
+    &:before{    
+      @include centeredX();    
+      width: 100px;
     }
   }
 }

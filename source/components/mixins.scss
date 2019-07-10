@@ -24,17 +24,14 @@
     height: $side;
 }
 @mixin centeredX($transLeft: -50%, $left: 50%){
-    position: absolute;
     left: $left;
     transform: translateX($transLeft);
 }
 @mixin centeredY($transTop: -50%, $top: 50%){
-    position: absolute;
     top: $top;
     transform: translateY($transTop);
 }
 @mixin centered( $transLeft: -50% , $transTop: -50%, $top: 50%, $left: 50%){
-    position: absolute;
     top: $top;
     left: $left;
     transform: translate( $transLeft , $transTop);

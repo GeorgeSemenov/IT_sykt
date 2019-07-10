@@ -1,10 +1,7 @@
 include ../../Blocks/header/header.pug
-include ../../Blocks/section-title/section-title.pug
+include ../../Blocks/price-block/price-block.pug
 include ../../Blocks/footer/footer.pug
 doctype html
-include ../../Blocks/bread-crumps/bread-crumps.pug
-include ../../Blocks/section-title/section-title.pug
-include ../../Blocks/price-menu/price-menu.pug
 include ../../Blocks/form/form.pug
 html
   head
@@ -16,15 +13,33 @@ html
       .content
         +header()
         .container
-          +bread-crumps()
-          +section-title("ПРАЙС")
-          +price-menu()
+          +price-block()
       +footer()
       +form( "Форма&nbsp;обратной&nbsp;связи",
-            "Ваше имя","feedback_name","text",
-            "Телефон","feedback_tel","tel",
+            {
+              label:"Ваше имя",
+              id:"feedback_name",
+              type:"text"},
+            {
+              label:"Телефон",
+              id:"feedback_tel",
+              type:"tel"
+            },
             false)(class=" form_theme_feedback ", id="feedback-form")
       +form("Оставить&nbsp;заявку",
-            "Ваше имя", "request_name", "text",
-            "Телефон", "request_tel", "tel",
-            true )(class="form_theme_request", id="request-form")
+            {
+              label:"Ваше имя", 
+              id:"request_name", 
+              type:"text"
+            },
+            {
+              label:"Телефон", 
+              id:"request_tel", 
+              type:"tel"
+            },
+            true,
+            {
+              label:"Согласен&nbsp;на&nbsp;обработку<br/>персональных&nbsp;данных", 
+              id:"request_checkbox-agreement", 
+              type:"checkbox"
+            } )(class="form_theme_request", id="request-form")

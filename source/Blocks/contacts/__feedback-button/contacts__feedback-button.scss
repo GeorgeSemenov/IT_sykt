@@ -9,7 +9,7 @@
     top: 40px;
   }
   @include media-breakpoint-up(xl){
-    left:$phone-number-width + $mail-width + 59px;
+    left:$phone-number-width + $mail-width + 52px;
   }
 
   @include media-breakpoint-down(xs){

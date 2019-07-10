@@ -1,7 +1,6 @@
 @import "../_theme_price/line-with-corner_theme_price";
 .line-with-corner_theme_price-active {
   $bkgColor: #d12c2c;
-  z-index: 1;
   
   .line-with-corner__thick-line{
     background-color: $bkgColor;

@@ -1,0 +1,7 @@
+.price-block__bread-crumps-wrapper {
+	height: 40px;//min-height работает везде 
+  //Замечательно, кроме IE 11 !!!
+	padding-left: 14px;
+	display: flex;
+	align-items: flex-end;
+}

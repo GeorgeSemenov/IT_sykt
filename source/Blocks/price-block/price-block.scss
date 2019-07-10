@@ -1,0 +1,9 @@
+.price-block {}
+@import "../section-title/section-title";
+@import "../bread-crumps/bread-crumps";
+@import "../price-menu/price-menu";
+@import '__section-title/price-block__section-title';
+@import '__price-menu/price-block__price-menu';
+@import '__bread-crumps/price-block__bread-crumps';@import '__section-title-wrapper/price-block__section-title-wrapper';
+@import '__price-menu-wrapper/price-block__price-menu-wrapper';
+@import '__bread-crumps-wrapper/price-block__bread-crumps-wrapper';

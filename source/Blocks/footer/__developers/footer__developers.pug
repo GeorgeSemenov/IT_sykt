@@ -1,4 +1,4 @@
-mixin footer__developers(developers='"Информационные технологии"')
+mixin footer__developers(developers='&laquo;Информационные технологии&raquo;')
   p.footer__developers&attributes(attributes)
     |Разработка:  
-    span=developers
+    span!=developers

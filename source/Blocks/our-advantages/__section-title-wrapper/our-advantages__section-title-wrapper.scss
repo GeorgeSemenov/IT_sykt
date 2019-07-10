@@ -1,0 +1,11 @@
+.our-advantages__section-title-wrapper {
+  height: 143px;//min-height работает везде 
+  //Замечательно, кроме IE 11 !!!
+  display: flex;
+  align-items: flex-end;
+  padding-left: 13px;
+  
+  @include media-breakpoint-down(md){
+    height: 95px;
+  }
+}

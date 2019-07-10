@@ -2,5 +2,10 @@
   padding-top: 10px;
   border: solid 3px #663333;
   padding-bottom: 5px;  
+
+  @include media-breakpoint-down(xs){
+    width: 100%;
+    border: none;
+  }
 }
 @import '_bkg_white/navbar__contacts_bkg_white';

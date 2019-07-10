@@ -25,6 +25,13 @@ html
         +car-park()
       +footer()
       +form( "Форма&nbsp;обратной&nbsp;связи",
-            "Ваше имя","request_name","text",
-            "Телефон","request_tel","tel",
+            {
+              label:"Ваше имя",
+              id:"request_name",
+              type:"text"},
+            {
+              label:"Телефон",
+              id:"request_tel",
+              type:"tel"
+            },
             false)(class=" form_theme_feedback ", id="feedback-form")

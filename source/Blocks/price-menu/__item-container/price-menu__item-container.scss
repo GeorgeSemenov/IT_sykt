@@ -9,11 +9,12 @@
     left: 0;
     right: 0;
 
-    top: 136px
+    top: 86px
     
   }
   @include media-breakpoint-down(md){
-    padding-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 10px;
   }
 }
 @import '_active/price-menu__item-container_active';

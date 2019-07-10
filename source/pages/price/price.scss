@@ -6,10 +6,8 @@
 
 // Блоки
 @import "../../Blocks/header/header";
-@import "../../Blocks/section-title/section-title";
-@import "../../Blocks/bread-crumps/bread-crumps";
-@import "../../Blocks/price-menu/price-menu";
 @import "../../Blocks/footer/footer";
+@import '../../Blocks/price-block/price-block';
 @import "../../Blocks/form/form";
 
 // Шрифты
@@ -29,26 +27,6 @@ body{
 
   @include media-breakpoint-down(xs){
     height: auto;
-  }
-}
-
-.bread-crumps{
-  padding-top: 27px;
-  font-size: 13px;
-  padding-left: 14px;
-}
-
-.section-title{
-  padding-top: 43px;
-  padding-left: 13px;
-}
-
-.price-menu{
-  padding-top: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
-  @include media-breakpoint-up(lg){
-    padding-bottom: 621px;
   }
 }
 

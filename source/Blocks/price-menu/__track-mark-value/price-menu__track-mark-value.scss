@@ -1,1 +1,12 @@
-.price-menu__track-mark-value {}
+.price-menu__track-mark-value {
+  padding-left: 11px;
+  position: relative;
+  top: 2px;
+
+  &:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "\2013";
+  }
+}

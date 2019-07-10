@@ -3,20 +3,23 @@ include __input-wrapper/form__input-wrapper.pug
 include __top-line/form__top-line.pug
 include __label/form__label.pug
 include ../feedback-button/feedback-button.pug
-mixin form(form_title,        first_input_label,first_input_id, first_input_type,        second_input_label,second_input_id, second_input_type,        isNeededTextArea=true)
+mixin form(form_title, firstInputInfoObj, secondInputInfoObj,        isNeededTextArea=true, checkboxInputInfoObj={label:"Согласен&nbsp;на&nbsp;обработку<br/>персональных&nbsp;данных", id:"feedback_checkbox-agreement", type:"checkbox"})
   .form__form-wrapper&attributes(attributes)
     .form__form-background#form__form-background
     form.form
       +form__top-line(form_title)
       +form__input-wrapper(
-      first_input_label,
-      first_input_id, 
-      first_input_type)
+      firstInputInfoObj.label,
+      firstInputInfoObj.id, 
+      firstInputInfoObj.type)
       +form__input-wrapper(
-      second_input_label,
-      second_input_id,
-      second_input_type)
+      secondInputInfoObj.label,
+      secondInputInfoObj.id,
+      secondInputInfoObj.type)
       if (isNeededTextArea)
         +form__textarea-wrapper("Краткая&nbsp;информация","requestTextArea")
-      +form__input-wrapper("Согласен&nbsp;на&nbsp;обработку<br/>персональных&nbsp;данных", "request_checkbox-agreement","checkbox")(class=" form__checkbox-wrapper form__input-wrapper_checkbox_vinous")
+      +form__input-wrapper(
+      checkboxInputInfoObj.label,
+      checkboxInputInfoObj.id,
+      checkboxInputInfoObj.type)(class=" form__checkbox-wrapper form__input-wrapper_checkbox_vinous")
       +feedback-button("Отправить")(class=" form__send-button")

@@ -1,6 +1,13 @@
 .price-menu__truck-desc {
-  @include media-breakpoint-up(lg){
-    display: flex;
+  display: flex;
+  width: 100%;
+  @include media-breakpoint-between(sm,md){
+    justify-content: space-around;
+  }
+  @include media-breakpoint-down(xs){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
 }

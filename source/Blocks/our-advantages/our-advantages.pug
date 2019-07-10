@@ -1,9 +1,10 @@
+include __section-title-wrapper/our-advantages__section-title-wrapper.pug
 include __row-of-advantage-blocks/our-advantages__row-of-advantage-blocks.pug
 include ../section-title/section-title.pug
 include ../line-with-corner/line-with-corner.pug
 mixin our-advantages(modifier)
   section.our-advantages.our-advantages_bkg_vinous&attributes(attributes)
     .container
-      +section-title("НАШИ&nbsp;ПРЕИМУЩЕСТВА")(class="our-advantages__section-title section-title_color_white ")
+      +our-advantages__section-title-wrapper("НАШИ&nbsp;ПРЕИМУЩЕСТВА")
       +our-advantages__row-of-advantage-blocks()
       +line-with-corner()(class="our-advantages__line-with-corner")

@@ -11,7 +11,11 @@
   }
 
   @include media-breakpoint-down(md){
-    padding-left: 29px;
+    position: relative;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

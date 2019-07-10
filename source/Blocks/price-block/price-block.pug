@@ -1,0 +1,11 @@
+include __bread-crumps-wrapper/price-block__bread-crumps-wrapper.pug
+include __price-menu-wrapper/price-block__price-menu-wrapper.pug
+include __section-title-wrapper/price-block__section-title-wrapper.pug
+include ../bread-crumps/bread-crumps.pug
+include ../section-title/section-title.pug
+include ../price-menu/price-menu.pug
+mixin price-block(modifier)
+  section.price-block&attributes(attributes)
+    +price-block__bread-crumps-wrapper()
+    +price-block__section-title-wrapper()
+    +price-block__price-menu-wrapper()

@@ -7223,6 +7223,11 @@ body {
       line-height: 14px; } }
 
 .logo-and-label__logo-and-text-wrapper {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
   position: absolute;
   width: 279px;
   right: 81px;
@@ -7251,10 +7256,10 @@ body {
     .contacts__mail {
       position: absolute;
       top: 49px;
-      left: 182px; } }
+      left: 189px; } }
   @media (min-width: 1200px) {
     .contacts__mail {
-      left: 197px; } }
+      left: 204px; } }
   @media (max-width: 991.98px) {
     .contacts__mail {
       width: 164.34109px;
@@ -7278,17 +7283,43 @@ body {
 .mail__address {
   font-family: "Open Sans";
   font-weight: 700;
-  color: #505050; }
+  color: #505050;
+  padding-left: 31px; }
+  @media (max-width: 991.98px) {
+    .mail__address {
+      padding-left: 29px; } }
+  @media (max-width: 575.98px) {
+    .mail__address {
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 10px; } }
+  .mail__address:before {
+    content: "";
+    background-image: url(/pereezd/images/mail.png);
+    width: 24px;
+    height: 18.5px;
+    display: block;
+    position: absolute;
+    left: -7px;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media (max-width: 991.98px) {
+      .mail__address:before {
+        left: 0; } }
+    @media (max-width: 575.98px) {
+      .mail__address:before {
+        width: 18.46154px;
+        height: 14.23077px; } }
 
 .contacts__phone-number {
-  width: 168px; }
+  width: 175px; }
   @media (min-width: 576px) {
     .contacts__phone-number {
       top: 50px;
       position: absolute; } }
   @media (max-width: 991.98px) {
     .contacts__phone-number {
-      width: 129.23077px;
+      width: 134.61538px;
       top: 15px; } }
   @media (max-width: 575.98px) {
     .contacts__phone-number {
@@ -7303,20 +7334,40 @@ body {
   position: relative;
   bottom: 4px;
   width: 14.1%;
-  height: 23.688px; }
+  height: 24.675px; }
   @media (max-width: 991.98px) {
     .phone-number__pic {
-      height: 18.22154px; } }
+      height: 18.98077px; } }
 
 .phone-number__number {
   font-family: "Open Sans";
   font-weight: 700;
   color: #505050;
-  position: relative; }
+  position: relative;
+  padding-left: 39px; }
   @media (max-width: 991.98px) {
     .phone-number__number {
       font-size: 13px;
-      bottom: 2px; } }
+      bottom: 2px;
+      padding-left: 29px; } }
+  @media (max-width: 575.98px) {
+    .phone-number__number {
+      margin-top: 10px; } }
+  .phone-number__number:before {
+    content: "";
+    background-image: url(/pereezd/images/phone.png);
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media (max-width: 575.98px) {
+      .phone-number__number:before {
+        width: 18.46154px;
+        height: 18.46154px; } }
 
 .contacts__feedback-button {
   border: solid 1px;
@@ -7325,7 +7376,7 @@ body {
   @media (min-width: 576px) {
     .contacts__feedback-button {
       position: absolute;
-      left: 424px;
+      left: 431px;
       top: 40px; } }
   @media (min-width: 1200px) {
     .contacts__feedback-button {
@@ -7353,8 +7404,8 @@ body {
   user-select: none; }
 
 .feedback-button__text {
-  font-family: open_sans;
-  font-size: 15px;
+  font-family: "Open Sans";
+  font-size: 13px;
   color: #663333;
   position: relative;
   right: 1px;
@@ -7375,7 +7426,9 @@ body {
     color: #518a32; }
 
 .navbar {
-  color: white !important; }
+  color: white !important;
+  font-family: "Open Sans";
+  font-size: 13px; }
 
 .navbar__toggler {
   color: white !important; }
@@ -7384,9 +7437,16 @@ body {
       margin-left: auto; } }
 
 .navbar__collapse {
-  background-color: #663333; }
+  background-color: #663333;
+  font-family: inherit;
+  font-size: inherit; }
+  @media (max-width: 575.98px) {
+    .navbar__collapse {
+      margin-top: 3px; } }
 
 .navbar__nav {
+  font-family: inherit;
+  font-size: inherit;
   background-color: #663333; }
   @media (min-width: 576px) {
     .navbar__nav {
@@ -7396,8 +7456,8 @@ body {
       align-items: center; } }
 
 .navbar__nav-item {
-  font-family: open_sans;
-  font-size: 15px; }
+  font-family: inherit;
+  font-size: inherit; }
   @media (min-width: 576px) {
     .navbar__nav-item {
       position: relative;
@@ -7405,9 +7465,11 @@ body {
       left: 15px; } }
   @media (max-width: 575.98px) {
     .navbar__nav-item {
-      text-align: center; } }
+      text-align: center;
+      width: 100%; } }
 
 .navbar__nav-link {
+  outline: none !important;
   color: white !important; }
   @media (min-width: 576px) {
     .navbar__nav-link {
@@ -7420,23 +7482,71 @@ body {
       padding-right: 35px !important;
       margin-right: 21px; } }
 
-.dropdown__toggle::after {
-  position: relative;
-  left: 6px;
-  top: 2px; }
+
+.dropdown {
+  font-family: inherit;
+  font-size: inherit; }
+
+.dropdown__toggle {
+  font-family: inherit;
+  font-size: inherit; }
+  .dropdown__toggle::after {
+    position: relative;
+    left: 6px;
+    top: 2px; }
 
 .navbar-light .navbar__nav .nav-link, .navbar-light .navbar__nav .navbar__nav-link {
   color: white !important; }
 
-@media (min-width: 576px) {
-  .dropdown__menu {
-    top: 36px; } }
+.dropdown__menu {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0;
+  padding-top: 16px;
+  padding-bottom: 26px; }
+  @media (min-width: 576px) {
+    .dropdown__menu {
+      left: -30px; } }
+  .dropdown__menu:before {
+    content: "";
+    height: 3px;
+    background-color: #d12c2c;
+    position: absolute;
+    top: -3px; }
+  @media (min-width: 576px) {
+    .dropdown__menu {
+      top: 36px;
+      position: relative; }
+      .dropdown__menu:before {
+        width: 33%;
+        left: 10.4%; } }
+  @media (max-width: 575.98px) {
+    .dropdown__menu {
+      width: 100%;
+      top: 0; }
+      .dropdown__menu.show {
+        position: relative; }
+      .dropdown__menu:before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px; } }
 
-.dropdown__item:before {
-  color: #663333;
-  content: ">";
+.dropdown__item {
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 43px;
+  padding-right: 29px;
+  padding-bottom: 3px;
   position: relative;
-  right: 10px; }
+  bottom: 2px; }
+  .dropdown__item:before {
+    color: #663333;
+    content: "\203A";
+    font-size: 23px;
+    position: relative;
+    right: 14px;
+    top: 2px; }
 
 .navbar__left-corner {
   border-bottom: 50px solid #663333;
@@ -7452,6 +7562,10 @@ body {
   padding-top: 10px;
   border: solid 3px #663333;
   padding-bottom: 5px; }
+  @media (max-width: 575.98px) {
+    .navbar__contacts {
+      width: 100%;
+      border: none; } }
 
 .navbar__contacts_bkg_white {
   background: white; }
@@ -7474,7 +7588,7 @@ body {
 
 .behind-the-word {
   height: 500px;
-  background-image: url(/images/mad-driver.png);
+  background-image: url(/pereezd/images/mad-driver.png);
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -7513,13 +7627,24 @@ body {
   font-family: "Open Sans";
   font-weight: 800;
   font-size: 30px;
-  color: #252525; }
+  color: #252525;
+  position: relative;
+  height: 59px; }
   @media (max-width: 991.98px) {
     .section-title__title {
-      font-size: 21px; } }
+      font-size: 21px;
+      height: 30px; } }
   @media (max-width: 575.98px) {
     .section-title__title {
       font-size: 15px; } }
+  .section-title__title:before {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #d12c2c;
+    position: absolute;
+    bottom: 0px;
+    left: 2px; }
 
 .section-title__underline {
   height: 3px;
@@ -7533,6 +7658,10 @@ body {
 
 .section-title_color_white .section-title__title {
   color: #ffffff; }
+
+@media (max-width: 991.98px) {
+  .section-title_underline-width_small .section-title__title:before {
+    width: 40px; } }
 
 .our-services__text {
   font-family: "open sans";
@@ -7620,7 +7749,8 @@ body {
     position: relative;
     height: 26px;
     background-color: #ffffff;
-    width: 100%; }
+    width: 100%;
+    right: -1px; }
   .line-with-corner_theme_end-of-section-white .line-with-corner__right-corner {
     border-right: 18px solid transparent;
     border-top: 26px solid #ffffff; }
@@ -7795,12 +7925,11 @@ body {
   border-right: 30px solid transparent;
   border-top: 40px solid #663333; }
 
-.line-with-corner_theme_price-active {
-  z-index: 1; }
-  .line-with-corner_theme_price-active .line-with-corner__thick-line {
-    background-color: #d12c2c; }
-  .line-with-corner_theme_price-active .line-with-corner__right-corner {
-    border-top-color: #d12c2c; }
+.line-with-corner_theme_price-active .line-with-corner__thick-line {
+  background-color: #d12c2c; }
+
+.line-with-corner_theme_price-active .line-with-corner__right-corner {
+  border-top-color: #d12c2c; }
 
 .line-with-corner_theme_only-white-corner .line-with-corner__left-corner {
   display: none; }
@@ -7848,13 +7977,6 @@ body {
     .our-services__row-of-title-blocks {
       margin-bottom: 25px; } }
 
-.our-advantages__section-title {
-  margin-left: 13px;
-  padding-top: 84px; }
-  @media (max-width: 991.98px) {
-    .our-advantages__section-title {
-      padding-top: 35px; } }
-
 .our-advantages__row-of-advantage-blocks {
   margin-top: 51px;
   text-align: center;
@@ -7885,6 +8007,15 @@ body {
 
 .our-advantages_bkg_vinous {
   background-color: #663333; }
+
+.our-advantages__section-title-wrapper {
+  height: 143px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 13px; }
+  @media (max-width: 991.98px) {
+    .our-advantages__section-title-wrapper {
+      height: 95px; } }
 
 .transport-organization {
   background-color: #e6e6e6; }
@@ -8055,7 +8186,8 @@ body {
     position: relative;
     height: 26px;
     background-color: #ffffff;
-    width: 100%; }
+    width: 100%;
+    right: -1px; }
   .line-with-corner_theme_end-of-section-white .line-with-corner__right-corner {
     border-right: 18px solid transparent;
     border-top: 26px solid #ffffff; }
@@ -8230,12 +8362,11 @@ body {
   border-right: 30px solid transparent;
   border-top: 40px solid #663333; }
 
-.line-with-corner_theme_price-active {
-  z-index: 1; }
-  .line-with-corner_theme_price-active .line-with-corner__thick-line {
-    background-color: #d12c2c; }
-  .line-with-corner_theme_price-active .line-with-corner__right-corner {
-    border-top-color: #d12c2c; }
+.line-with-corner_theme_price-active .line-with-corner__thick-line {
+  background-color: #d12c2c; }
+
+.line-with-corner_theme_price-active .line-with-corner__right-corner {
+  border-top-color: #d12c2c; }
 
 .line-with-corner_theme_only-white-corner .line-with-corner__left-corner {
   display: none; }
@@ -8264,16 +8395,27 @@ body {
   background-color: #1c1c1c;
   font-family: "open sans";
   font-size: 13px; }
-  @media (max-width: 575.98px) {
-    .footer {
-      font-size: 11px; } }
+
+@media (max-width: 1199.98px) {
+  .footer__place-and-work-time {
+    position: absolute;
+    left: 0;
+    top: 20px; } }
 
 .footer__contacts {
   position: relative;
   right: 40px; }
   @media (max-width: 1199.98px) {
     .footer__contacts {
-      right: auto; } }
+      position: absolute;
+      bottom: 10px;
+      left: 0px; } }
+
+@media (max-width: 1199.98px) {
+  .footer__feedback-button-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center; } }
 
 .footer__place {
   position: relative;
@@ -8321,10 +8463,15 @@ body {
   flex-wrap: wrap; }
   @media (max-width: 1199.98px) {
     .footer__aboveground {
-      justify-content: space-around; } }
+      position: relative;
+      justify-content: flex-end; } }
   @media (max-width: 575.98px) {
     .footer__aboveground {
-      height: 160px; } }
+      height: 160px;
+      justify-content: center; } }
+  @media (max-width: 360px) {
+    .footer__aboveground {
+      font-size: 11px; } }
 
 .form {
   z-index: 2;
@@ -8418,7 +8565,8 @@ body {
     position: relative;
     height: 26px;
     background-color: #ffffff;
-    width: 100%; }
+    width: 100%;
+    right: -1px; }
   .line-with-corner_theme_end-of-section-white .line-with-corner__right-corner {
     border-right: 18px solid transparent;
     border-top: 26px solid #ffffff; }
@@ -8593,12 +8741,11 @@ body {
   border-right: 30px solid transparent;
   border-top: 40px solid #663333; }
 
-.line-with-corner_theme_price-active {
-  z-index: 1; }
-  .line-with-corner_theme_price-active .line-with-corner__thick-line {
-    background-color: #d12c2c; }
-  .line-with-corner_theme_price-active .line-with-corner__right-corner {
-    border-top-color: #d12c2c; }
+.line-with-corner_theme_price-active .line-with-corner__thick-line {
+  background-color: #d12c2c; }
+
+.line-with-corner_theme_price-active .line-with-corner__right-corner {
+  border-top-color: #d12c2c; }
 
 .line-with-corner_theme_only-white-corner .line-with-corner__left-corner {
   display: none; }
@@ -8673,7 +8820,9 @@ body {
   height: 41px;
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6;
+  border: none;
+  padding-left: 10px; }
 
 .form__textarea-wrapper {
   display: flex;
@@ -8684,7 +8833,9 @@ body {
   margin-top: 21px; }
 
 .form__textarea {
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6;
+  border: none;
+  padding: 10px; }
 
 .feedback-button {
   cursor: pointer;
@@ -8698,8 +8849,8 @@ body {
   user-select: none; }
 
 .feedback-button__text {
-  font-family: open_sans;
-  font-size: 15px;
+  font-family: "Open Sans";
+  font-size: 13px;
   color: #663333;
   position: relative;
   right: 1px;
@@ -8748,226 +8899,226 @@ body {
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-Heavy.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Heavy"), local("../../fonts/FuturaPT/FuturaPT-Heavy"), url(/fonts/FuturaPT-Heavy.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-Heavy.woff) format("woff"), url(/fonts/FuturaPT-Heavy.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-Heavy.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Heavy"), local("../../fonts/FuturaPT/FuturaPT-Heavy"), url(/pereezd/fonts/FuturaPT-Heavy.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-Heavy.woff) format("woff"), url(/pereezd/fonts/FuturaPT-Heavy.ttf) format("truetype");
   font-weight: 900;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-Medium.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Medium"), local("../../fonts/FuturaPT/FuturaPT-Medium"), url(/fonts/FuturaPT-Medium.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-Medium.woff) format("woff"), url(/fonts/FuturaPT-Medium.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-Medium.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Medium"), local("../../fonts/FuturaPT/FuturaPT-Medium"), url(/pereezd/fonts/FuturaPT-Medium.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-Medium.woff) format("woff"), url(/pereezd/fonts/FuturaPT-Medium.ttf) format("truetype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-MediumObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Medium Oblique"), local("../../fonts/FuturaPT/FuturaPT-MediumObl"), url(/fonts/FuturaPT-MediumObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-MediumObl.woff) format("woff"), url(/fonts/FuturaPT-MediumObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-MediumObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Medium Oblique"), local("../../fonts/FuturaPT/FuturaPT-MediumObl"), url(/pereezd/fonts/FuturaPT-MediumObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-MediumObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-MediumObl.ttf) format("truetype");
   font-weight: 500;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Cond';
-  src: url(/fonts/FuturaPTCond-Medium.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Medium"), local("../../fonts/FuturaPT/FuturaPTCond-Medium"), url(/fonts/FuturaPTCond-Medium.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-Medium.woff) format("woff"), url(/fonts/FuturaPTCond-Medium.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-Medium.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Medium"), local("../../fonts/FuturaPT/FuturaPTCond-Medium"), url(/pereezd/fonts/FuturaPTCond-Medium.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-Medium.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-Medium.ttf) format("truetype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-LightObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Light Oblique"), local("../../fonts/FuturaPT/FuturaPT-LightObl"), url(/fonts/FuturaPT-LightObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-LightObl.woff) format("woff"), url(/fonts/FuturaPT-LightObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-LightObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Light Oblique"), local("../../fonts/FuturaPT/FuturaPT-LightObl"), url(/pereezd/fonts/FuturaPT-LightObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-LightObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-LightObl.ttf) format("truetype");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Book';
-  src: url(/fonts/FuturaPT-Book.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Book"), local("../../fonts/FuturaPT/FuturaPT-Book"), url(/fonts/FuturaPT-Book.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-Book.woff) format("woff"), url(/fonts/FuturaPT-Book.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-Book.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Book"), local("../../fonts/FuturaPT/FuturaPT-Book"), url(/pereezd/fonts/FuturaPT-Book.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-Book.woff) format("woff"), url(/pereezd/fonts/FuturaPT-Book.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT Cond';
-  src: url(/fonts/FuturaPTCond-Bold.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Bold"), local("../../fonts/FuturaPT/FuturaPTCond-Bold"), url(/fonts/FuturaPTCond-Bold.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-Bold.woff) format("woff"), url(/fonts/FuturaPTCond-Bold.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-Bold.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Bold"), local("../../fonts/FuturaPT/FuturaPTCond-Bold"), url(/pereezd/fonts/FuturaPTCond-Bold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-Bold.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-Bold.ttf) format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT Book';
-  src: url(/fonts/FuturaPT-BookObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Book Oblique"), local("../../fonts/FuturaPT/FuturaPT-BookObl"), url(/fonts/FuturaPT-BookObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-BookObl.woff) format("woff"), url(/fonts/FuturaPT-BookObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-BookObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Book Oblique"), local("../../fonts/FuturaPT/FuturaPT-BookObl"), url(/pereezd/fonts/FuturaPT-BookObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-BookObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-BookObl.ttf) format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Cond Extra';
-  src: url(/fonts/FuturaPTCond-ExtraBoldObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Extra Bold Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-ExtraBoldObl"), url(/fonts/FuturaPTCond-ExtraBoldObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-ExtraBoldObl.woff) format("woff"), url(/fonts/FuturaPTCond-ExtraBoldObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-ExtraBoldObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Extra Bold Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-ExtraBoldObl"), url(/pereezd/fonts/FuturaPTCond-ExtraBoldObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-ExtraBoldObl.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-ExtraBoldObl.ttf) format("truetype");
   font-weight: 800;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-Light.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Light"), local("../../fonts/FuturaPT/FuturaPT-Light"), url(/fonts/FuturaPT-Light.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-Light.woff) format("woff"), url(/fonts/FuturaPT-Light.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-Light.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Light"), local("../../fonts/FuturaPT/FuturaPT-Light"), url(/pereezd/fonts/FuturaPT-Light.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-Light.woff) format("woff"), url(/pereezd/fonts/FuturaPT-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-BoldObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Bold Oblique"), local("../../fonts/FuturaPT/FuturaPT-BoldObl"), url(/fonts/FuturaPT-BoldObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-BoldObl.woff) format("woff"), url(/fonts/FuturaPT-BoldObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-BoldObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Bold Oblique"), local("../../fonts/FuturaPT/FuturaPT-BoldObl"), url(/pereezd/fonts/FuturaPT-BoldObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-BoldObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-BoldObl.ttf) format("truetype");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Demi';
-  src: url(/fonts/FuturaPT-DemiObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Demi Oblique"), local("../../fonts/FuturaPT/FuturaPT-DemiObl"), url(/fonts/FuturaPT-DemiObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-DemiObl.woff) format("woff"), url(/fonts/FuturaPT-DemiObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-DemiObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Demi Oblique"), local("../../fonts/FuturaPT/FuturaPT-DemiObl"), url(/pereezd/fonts/FuturaPT-DemiObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-DemiObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-DemiObl.ttf) format("truetype");
   font-weight: 600;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Cond Extra';
-  src: url(/fonts/FuturaPTCond-ExtraBold.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Extra Bold"), local("../../fonts/FuturaPT/FuturaPTCond-ExtraBold"), url(/fonts/FuturaPTCond-ExtraBold.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-ExtraBold.woff) format("woff"), url(/fonts/FuturaPTCond-ExtraBold.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-ExtraBold.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Extra Bold"), local("../../fonts/FuturaPT/FuturaPTCond-ExtraBold"), url(/pereezd/fonts/FuturaPTCond-ExtraBold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-ExtraBold.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-ExtraBold.ttf) format("truetype");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT Demi';
-  src: url(/fonts/FuturaPT-Demi.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Demi"), local("../../fonts/FuturaPT/FuturaPT-Demi"), url(/fonts/FuturaPT-Demi.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-Demi.woff) format("woff"), url(/fonts/FuturaPT-Demi.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-Demi.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Demi"), local("../../fonts/FuturaPT/FuturaPT-Demi"), url(/pereezd/fonts/FuturaPT-Demi.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-Demi.woff) format("woff"), url(/pereezd/fonts/FuturaPT-Demi.ttf) format("truetype");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-HeavyObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Heavy Oblique"), local("../../fonts/FuturaPT/FuturaPT-HeavyObl"), url(/fonts/FuturaPT-HeavyObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-HeavyObl.woff) format("woff"), url(/fonts/FuturaPT-HeavyObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-HeavyObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Heavy Oblique"), local("../../fonts/FuturaPT/FuturaPT-HeavyObl"), url(/pereezd/fonts/FuturaPT-HeavyObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-HeavyObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-HeavyObl.ttf) format("truetype");
   font-weight: 900;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Extra';
-  src: url(/fonts/FuturaPT-ExtraBoldObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Extra Bold Oblique"), local("../../fonts/FuturaPT/FuturaPT-ExtraBoldObl"), url(/fonts/FuturaPT-ExtraBoldObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-ExtraBoldObl.woff) format("woff"), url(/fonts/FuturaPT-ExtraBoldObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-ExtraBoldObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Extra Bold Oblique"), local("../../fonts/FuturaPT/FuturaPT-ExtraBoldObl"), url(/pereezd/fonts/FuturaPT-ExtraBoldObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-ExtraBoldObl.woff) format("woff"), url(/pereezd/fonts/FuturaPT-ExtraBoldObl.ttf) format("truetype");
   font-weight: 800;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Cond Book';
-  src: url(/fonts/FuturaPTCond-Book.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Book"), local("../../fonts/FuturaPT/FuturaPTCond-Book"), url(/fonts/FuturaPTCond-Book.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-Book.woff) format("woff"), url(/fonts/FuturaPTCond-Book.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-Book.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Book"), local("../../fonts/FuturaPT/FuturaPTCond-Book"), url(/pereezd/fonts/FuturaPTCond-Book.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-Book.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-Book.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url(/fonts/FuturaPT-Bold.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Bold"), local("../../fonts/FuturaPT/FuturaPT-Bold"), url(/fonts/FuturaPT-Bold.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-Bold.woff) format("woff"), url(/fonts/FuturaPT-Bold.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-Bold.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Bold"), local("../../fonts/FuturaPT/FuturaPT-Bold"), url(/pereezd/fonts/FuturaPT-Bold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-Bold.woff) format("woff"), url(/pereezd/fonts/FuturaPT-Bold.ttf) format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT Extra';
-  src: url(/fonts/FuturaPT-ExtraBold.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Extra Bold"), local("../../fonts/FuturaPT/FuturaPT-ExtraBold"), url(/fonts/FuturaPT-ExtraBold.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPT-ExtraBold.woff) format("woff"), url(/fonts/FuturaPT-ExtraBold.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPT-ExtraBold.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Extra Bold"), local("../../fonts/FuturaPT/FuturaPT-ExtraBold"), url(/pereezd/fonts/FuturaPT-ExtraBold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPT-ExtraBold.woff) format("woff"), url(/pereezd/fonts/FuturaPT-ExtraBold.ttf) format("truetype");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'Futura PT Cond';
-  src: url(/fonts/FuturaPTCond-BoldObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Bold Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-BoldObl"), url(/fonts/FuturaPTCond-BoldObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-BoldObl.woff) format("woff"), url(/fonts/FuturaPTCond-BoldObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-BoldObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Bold Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-BoldObl"), url(/pereezd/fonts/FuturaPTCond-BoldObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-BoldObl.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-BoldObl.ttf) format("truetype");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Cond';
-  src: url(/fonts/FuturaPTCond-MediumObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Medium Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-MediumObl"), url(/fonts/FuturaPTCond-MediumObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-MediumObl.woff) format("woff"), url(/fonts/FuturaPTCond-MediumObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-MediumObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Medium Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-MediumObl"), url(/pereezd/fonts/FuturaPTCond-MediumObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-MediumObl.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-MediumObl.ttf) format("truetype");
   font-weight: 500;
   font-style: italic; }
 
 @font-face {
   font-family: 'Futura PT Cond Book';
-  src: url(/fonts/FuturaPTCond-BookObl.eot);
-  src: local("../../fonts/FuturaPT/Futura PT Cond Book Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-BookObl"), url(/fonts/FuturaPTCond-BookObl.eot?#iefix) format("embedded-opentype"), url(/fonts/FuturaPTCond-BookObl.woff) format("woff"), url(/fonts/FuturaPTCond-BookObl.ttf) format("truetype");
+  src: url(/pereezd/fonts/FuturaPTCond-BookObl.eot);
+  src: local("../../fonts/FuturaPT/Futura PT Cond Book Oblique"), local("../../fonts/FuturaPT/FuturaPTCond-BookObl"), url(/pereezd/fonts/FuturaPTCond-BookObl.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/FuturaPTCond-BookObl.woff) format("woff"), url(/pereezd/fonts/FuturaPTCond-BookObl.ttf) format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 /* This stylesheet generated by Transfonter (https://transfonter.org) on October 3, 2017 10:08 PM */
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-SemiBoldItalic.eot);
-  src: local("../../fonts/OpenSans/Open Sans SemiBold Italic"), local("../../fonts/OpenSans/OpenSans-SemiBoldItalic"), url(/fonts/OpenSans-SemiBoldItalic.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-SemiBoldItalic.woff) format("woff"), url(/fonts/OpenSans-SemiBoldItalic.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-SemiBoldItalic.eot);
+  src: local("../../fonts/OpenSans/Open Sans SemiBold Italic"), local("../../fonts/OpenSans/OpenSans-SemiBoldItalic"), url(/pereezd/fonts/OpenSans-SemiBoldItalic.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-SemiBoldItalic.woff) format("woff"), url(/pereezd/fonts/OpenSans-SemiBoldItalic.ttf) format("truetype");
   font-weight: 600;
   font-style: italic; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-LightItalic.eot);
-  src: local("../../fonts/OpenSans/Open Sans Light Italic"), local("../../fonts/OpenSans/OpenSans-LightItalic"), url(/fonts/OpenSans-LightItalic.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-LightItalic.woff) format("woff"), url(/fonts/OpenSans-LightItalic.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-LightItalic.eot);
+  src: local("../../fonts/OpenSans/Open Sans Light Italic"), local("../../fonts/OpenSans/OpenSans-LightItalic"), url(/pereezd/fonts/OpenSans-LightItalic.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-LightItalic.woff) format("woff"), url(/pereezd/fonts/OpenSans-LightItalic.ttf) format("truetype");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-Bold.eot);
-  src: local("../../fonts/OpenSans/Open Sans Bold"), local("../../fonts/OpenSans/OpenSans-Bold"), url(/fonts/OpenSans-Bold.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-Bold.woff) format("woff"), url(/fonts/OpenSans-Bold.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-Bold.eot);
+  src: local("../../fonts/OpenSans/Open Sans Bold"), local("../../fonts/OpenSans/OpenSans-Bold"), url(/pereezd/fonts/OpenSans-Bold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-Bold.woff) format("woff"), url(/pereezd/fonts/OpenSans-Bold.ttf) format("truetype");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-ExtraBoldItalic.eot);
-  src: local("../../fonts/OpenSans/Open Sans ExtraBold Italic"), local("../../fonts/OpenSans/OpenSans-ExtraBoldItalic"), url(/fonts/OpenSans-ExtraBoldItalic.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-ExtraBoldItalic.woff) format("woff"), url(/fonts/OpenSans-ExtraBoldItalic.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-ExtraBoldItalic.eot);
+  src: local("../../fonts/OpenSans/Open Sans ExtraBold Italic"), local("../../fonts/OpenSans/OpenSans-ExtraBoldItalic"), url(/pereezd/fonts/OpenSans-ExtraBoldItalic.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-ExtraBoldItalic.woff) format("woff"), url(/pereezd/fonts/OpenSans-ExtraBoldItalic.ttf) format("truetype");
   font-weight: 800;
   font-style: italic; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-Light.eot);
-  src: local("../../fonts/OpenSans/Open Sans Light"), local("../../fonts/OpenSans/OpenSans-Light"), url(/fonts/OpenSans-Light.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-Light.woff) format("woff"), url(/fonts/OpenSans-Light.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-Light.eot);
+  src: local("../../fonts/OpenSans/Open Sans Light"), local("../../fonts/OpenSans/OpenSans-Light"), url(/pereezd/fonts/OpenSans-Light.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-Light.woff) format("woff"), url(/pereezd/fonts/OpenSans-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-Italic.eot);
-  src: local("../../fonts/OpenSans/Open Sans Italic"), local("../../fonts/OpenSans/OpenSans-Italic"), url(/fonts/OpenSans-Italic.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-Italic.woff) format("woff"), url(/fonts/OpenSans-Italic.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-Italic.eot);
+  src: local("../../fonts/OpenSans/Open Sans Italic"), local("../../fonts/OpenSans/OpenSans-Italic"), url(/pereezd/fonts/OpenSans-Italic.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-Italic.woff) format("woff"), url(/pereezd/fonts/OpenSans-Italic.ttf) format("truetype");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-Regular.eot);
-  src: local("../../fonts/OpenSans/Open Sans Regular"), local("../../fonts/OpenSans/OpenSans-Regular"), url(/fonts/OpenSans-Regular.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-Regular.woff) format("woff"), url(/fonts/OpenSans-Regular.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-Regular.eot);
+  src: local("../../fonts/OpenSans/Open Sans Regular"), local("../../fonts/OpenSans/OpenSans-Regular"), url(/pereezd/fonts/OpenSans-Regular.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-Regular.woff) format("woff"), url(/pereezd/fonts/OpenSans-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-SemiBold.eot);
-  src: local("../../fonts/OpenSans/Open Sans SemiBold"), local("../../fonts/OpenSans/OpenSans-SemiBold"), url(/fonts/OpenSans-SemiBold.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-SemiBold.woff) format("woff"), url(/fonts/OpenSans-SemiBold.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-SemiBold.eot);
+  src: local("../../fonts/OpenSans/Open Sans SemiBold"), local("../../fonts/OpenSans/OpenSans-SemiBold"), url(/pereezd/fonts/OpenSans-SemiBold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-SemiBold.woff) format("woff"), url(/pereezd/fonts/OpenSans-SemiBold.ttf) format("truetype");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-ExtraBold.eot);
-  src: local("../../fonts/OpenSans/Open Sans ExtraBold"), local("../../fonts/OpenSans/OpenSans-ExtraBold"), url(/fonts/OpenSans-ExtraBold.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-ExtraBold.woff) format("woff"), url(/fonts/OpenSans-ExtraBold.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-ExtraBold.eot);
+  src: local("../../fonts/OpenSans/Open Sans ExtraBold"), local("../../fonts/OpenSans/OpenSans-ExtraBold"), url(/pereezd/fonts/OpenSans-ExtraBold.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-ExtraBold.woff) format("woff"), url(/pereezd/fonts/OpenSans-ExtraBold.ttf) format("truetype");
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(/fonts/OpenSans-BoldItalic.eot);
-  src: local("../../fonts/OpenSans/Open Sans Bold Italic"), local("../../fonts/OpenSans/OpenSans-BoldItalic"), url(/fonts/OpenSans-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/fonts/OpenSans-BoldItalic.woff) format("woff"), url(/fonts/OpenSans-BoldItalic.ttf) format("truetype");
+  src: url(/pereezd/fonts/OpenSans-BoldItalic.eot);
+  src: local("../../fonts/OpenSans/Open Sans Bold Italic"), local("../../fonts/OpenSans/OpenSans-BoldItalic"), url(/pereezd/fonts/OpenSans-BoldItalic.eot?#iefix) format("embedded-opentype"), url(/pereezd/fonts/OpenSans-BoldItalic.woff) format("woff"), url(/pereezd/fonts/OpenSans-BoldItalic.ttf) format("truetype");
   font-weight: bold;
   font-style: italic; }
 
@@ -9007,12 +9158,12 @@ body {
       padding-bottom: 25px; } }
 
 .car-park {
-  padding-top: 85px;
-  padding-bottom: 39px; }
+  margin-top: 88px;
+  margin-bottom: 39px; }
   @media (max-width: 991.98px) {
     .car-park {
-      padding-top: 30px;
-      padding-bottom: 25px; } }
+      margin-top: 30px;
+      margin-bottom: 25px; } }
 
 @media (min-width: 992px) {
   .footer .container {

@@ -11,5 +11,6 @@
   }
   @include media-breakpoint-down(xs){
     text-align: center;
+    width: 100%;
   }
 }

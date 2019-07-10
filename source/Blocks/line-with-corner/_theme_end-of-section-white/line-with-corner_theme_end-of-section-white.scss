@@ -23,6 +23,10 @@
     height: $lineHeight;
     background-color: $bkgColor;
     width: 100%;
+    right: -1px;//Если не сдвинуть на один пиксель 
+    //то в 
+    //chrome будет зазор в один пиксель в линии,
+    // будет не красиво.
   }
 
   .line-with-corner__right-corner {

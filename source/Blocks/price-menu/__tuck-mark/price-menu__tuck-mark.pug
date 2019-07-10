@@ -1,6 +1,5 @@
 include ../__track-mark-value/price-menu__track-mark-value.pug
 include ../__mark-symbol/price-menu__mark-symbol.pug
-mixin price-menu__tuck-mark(marksColumnItemSymbol, mark)
+mixin price-menu__tuck-mark(mark)
   .price-menu__tuck-mark&attributes(attributes)
-    +price-menu__mark-symbol(marksColumnItemSymbol)
     +price-menu__track-mark-value(mark)

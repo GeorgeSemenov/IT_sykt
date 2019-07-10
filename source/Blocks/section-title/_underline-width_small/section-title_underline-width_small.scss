@@ -1,0 +1,9 @@
+.section-title_underline-width_small {
+	.section-title__title{
+		&:before{
+      @include media-breakpoint-down(md){
+				width: 40px;
+      }
+		}
+	}
+}
